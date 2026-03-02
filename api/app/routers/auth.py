@@ -2,10 +2,10 @@
 Authentication Router
 User registration, login, and profile management
 """
-
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from sqlalchemy import select
+from sqlalchemy.sql import func  # MOVED TO TOP - THIS IS THE FIX
 from typing import Optional
 
 from app.services.database import get_db
@@ -134,7 +134,3 @@ async def logout(current_user: TokenData = Depends(get_current_user)):
     token blacklisting (not implemented in this MVP).
     """
     return {"message": "Successfully logged out"}
-
-
-# Need to import func for last_login_at update
-from sqlalchemy.sql import func

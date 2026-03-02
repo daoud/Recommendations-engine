@@ -1,22 +1,22 @@
-"""
-Profiles Router
-Candidate profile management and resume upload
-"""
-
-from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Form, Body
-from sqlalchemy.orm import Session
-from sqlalchemy import select
-from typing import List, Optional
+import os
+import re
+import io
+import json
+import logging
+import tempfile
+from typing import Optional
 from datetime import datetime
+from fastapi import APIRouter, Depends, UploadFile, File, HTTPException
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 from pydantic import BaseModel
-import uuid
-
 from app.services.database import get_db
-from app.services import minio_service, embedding_service, milvus_service
 from app.models import User, Profile, ProfileSkill, Skill
 from app.schemas import ProfileResponse, ProfileCreate
 from app.utils import get_current_user
 from app.schemas import TokenData
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/profiles", tags=["Profiles"])
 
@@ -31,6 +31,83 @@ class ProfileUpdate(BaseModel):
     desired_salary_min: Optional[int] = None
     desired_salary_max: Optional[int] = None
     is_open_to_work: Optional[bool] = None
+
+
+# ─── Lazy-load multi-agent processor (heavy imports) ───
+_resume_graph = None
+
+def get_resume_graph():
+    global _resume_graph
+    if _resume_graph is None:
+        try:
+            from app.agents.skill_taxonomy import SkillTaxonomyManager
+            from app.agents.resume_processor import ResumeProcessingGraph
+            import os
+
+            base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            taxonomy = SkillTaxonomyManager()
+            taxonomy.load_all_sources(
+                onet_path=os.path.join(base, "data", "onet", "Technology_Skills.txt"),
+                esco_path=os.path.join(base, "data", "esco", "skills_en.csv"),
+                custom_path=os.path.join(base, "data", "custom", "custom_skills.json"),
+            )
+            _resume_graph = ResumeProcessingGraph(taxonomy=taxonomy)
+            logger.info("✅ Multi-agent ResumeProcessingGraph initialized")
+        except Exception as e:
+            logger.error(f"❌ Failed to init ResumeProcessingGraph: {e}")
+            _resume_graph = None
+    return _resume_graph
+
+
+# ─── PDF Text Extraction — Column-aware with pdfplumber ───
+
+def extract_pdf_text_pdfplumber(file_bytes: bytes) -> str:
+    """Extract text from PDF using pdfplumber with column splitting.
+    For 2-column resumes: separates left (experience) from right (skills/certs).
+    """
+    try:
+        import pdfplumber
+    except ImportError:
+        logger.warning("pdfplumber not installed, returning empty")
+        return ""
+
+    sections = []
+    try:
+        with pdfplumber.open(io.BytesIO(file_bytes)) as pdf:
+            for i, page in enumerate(pdf.pages):
+                bbox = page.bbox  # (x0, y0, x1, y1)
+                x0, y0, x1, y1 = bbox
+                w = x1 - x0
+
+                left_text = ""
+                right_text = ""
+                try:
+                    left_crop = page.crop((x0, y0, x0 + w * 0.62, y1))
+                    left_text = (left_crop.extract_text(layout=False) or "").strip()
+
+                    right_crop = page.crop((x0 + w * 0.62, y0, x1, y1))
+                    right_text = (right_crop.extract_text(layout=False) or "").strip()
+                except Exception:
+                    left_text = ""
+                    right_text = ""
+
+                # If column split produced good results, use it
+                if left_text and right_text and len(left_text) > 200:
+                    sections.append(f"--- PAGE {i+1} MAIN CONTENT ---\n{left_text}")
+                    sections.append(f"--- PAGE {i+1} SIDEBAR ---\n{right_text}")
+                else:
+                    # Single column page
+                    full = (page.extract_text(layout=False) or "").strip()
+                    if full:
+                        sections.append(f"--- PAGE {i+1} ---\n{full}")
+
+        result = "\n\n".join(sections)
+        logger.info(f"pdfplumber extracted: {len(pdf.pages)} pages, {len(result)} chars")
+        return result
+
+    except Exception as e:
+        logger.error(f"pdfplumber error: {e}")
+        return ""
 
 
 @router.get("/me")
@@ -114,12 +191,15 @@ async def upload_resume(
     current_user: TokenData = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """Upload and parse resume."""
-    allowed_types = ["application/pdf", "application/msword",
-                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document"]
+    """Upload and parse resume using multi-agent AI system."""
+    allowed_types = [
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ]
 
     if file.content_type not in allowed_types:
-        raise HTTPException(status_code=400, detail="Invalid file type. Only PDF and Word documents are allowed.")
+        raise HTTPException(status_code=400, detail="Invalid file type. Only PDF and Word documents allowed.")
 
     profile = db.execute(
         select(Profile).where(Profile.user_id == current_user.user_id)
@@ -128,184 +208,252 @@ async def upload_resume(
     if not profile:
         raise HTTPException(status_code=404, detail="Profile not found")
 
-    file_ext = file.filename.split(".")[-1] if file.filename else "pdf"
-    object_name = f"{current_user.user_id}/{uuid.uuid4()}.{file_ext}"
-
-    # Read file content
+    # ── Read file content ──
     file_content = await file.read()
-    
-    # Upload to MinIO
-    try:
-        import io
-        file_io = io.BytesIO(file_content)
-        s3_path = minio_service.upload_resume(file_io, object_name, file.content_type)
-        profile.resume_s3_path = s3_path
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to upload file: {str(e)}")
 
-    # Extract text from PDF
+    # ── Extract text ──
     resume_text = ""
     try:
-        import io
         if file.content_type == "application/pdf":
-            import PyPDF2
-            pdf_reader = PyPDF2.PdfReader(io.BytesIO(file_content))
-            for page in pdf_reader.pages:
-                resume_text += page.extract_text() or ""
+            # ★ Try pdfplumber column-aware extraction first (fixes 2-column resumes)
+            resume_text = extract_pdf_text_pdfplumber(file_content)
+
+            # Fallback to PyPDF2 if pdfplumber failed
+            if not resume_text or len(resume_text.strip()) < 100:
+                logger.info("pdfplumber insufficient, falling back to PyPDF2")
+                import PyPDF2
+                pdf_reader = PyPDF2.PdfReader(io.BytesIO(file_content))
+                resume_text = ""
+                for page in pdf_reader.pages:
+                    resume_text += page.extract_text() or ""
         else:
-            # For Word docs, try basic extraction
-            resume_text = file_content.decode('utf-8', errors='ignore')
-        
-        profile.resume_text_extracted = resume_text[:50000]  # Limit size
+            resume_text = file_content.decode("utf-8", errors="ignore")
+
+        profile.resume_text_extracted = resume_text[:50000]
     except Exception as e:
+        logger.error(f"Text extraction failed: {e}")
         resume_text = f"Resume file: {file.filename}"
         profile.resume_text_extracted = resume_text
 
-    # Parse with LLM
+    if len(resume_text.strip()) < 50:
+        raise HTTPException(status_code=400, detail="Could not extract enough text from resume. Try a different file.")
+
+    # ── Parse with Multi-Agent System ──
     parsed_data = None
+    s3_path = f"local/{current_user.user_id}/{file.filename}"
+
     try:
-        from app.services import llm_service
-        
-        if resume_text and len(resume_text) > 50:
+        graph = get_resume_graph()
+
+        if graph:
+            logger.info(f"🚀 Parsing resume with multi-agent system ({len(resume_text)} chars)")
+            parsed_data = graph.process(resume_text, source_file=file.filename or "resume.pdf")
+            logger.info(f"✅ Multi-agent parse complete: {parsed_data.get('meta', {}).get('review', {}).get('stats', {})}")
+        else:
+            logger.warning("⚠️ Multi-agent system unavailable, using basic parser")
+            from app.services import llm_service
             parsed_data = llm_service.parse_resume(resume_text)
-            
-            if parsed_data:
-                profile.parsed_json_draft = parsed_data
-                profile.verification_score = 0.7
-                
-                # Auto-populate profile fields from parsed data
-                personal_info = parsed_data.get("personal_info", {})
-                if personal_info.get("name"):
-                    names = personal_info["name"].split(" ", 1)
-                    # Update user first/last name if empty
-                    user = db.get(User, current_user.user_id)
-                    if user and not user.first_name:
-                        user.first_name = names[0] if names else ""
-                        user.last_name = names[1] if len(names) > 1 else ""
-                
-                # Set location from personal info
-                if personal_info.get("location"):
-                    loc = personal_info["location"]
-                    if "," in loc:
-                        parts = loc.split(",")
-                        profile.location_city = parts[0].strip()
-                        profile.location_country = parts[-1].strip()
-                    else:
-                        profile.location_city = loc
-                
-                # Set headline from most recent job title
-                experience = parsed_data.get("experience", [])
-                if experience and len(experience) > 0:
-                    latest_job = experience[0]
-                    if latest_job.get("title"):
-                        profile.headline = latest_job["title"]
-                    
-                    # Calculate years of experience
-                    # Calculate years of experience
-                total_years = 0
-                for exp in experience:
-                    # Try multiple field names
-                    start = exp.get("start_date") or exp.get("start") or exp.get("from") or ""
-                    end = exp.get("end_date") or exp.get("end") or exp.get("to") or "present"
-                    
-                    # Convert to string
-                    start = str(start).strip()
-                    end = str(end).strip()
-                    
-                    if start:
-                        try:
-                            # Extract year from various formats: "2018", "2018-01", "Jan 2018", "2018-01-15"
-                            import re
-                            start_match = re.search(r'(19|20)\d{2}', start)
-                            end_match = re.search(r'(19|20)\d{2}', end)
-                            
-                            if start_match:
-                                start_year = int(start_match.group())
-                                if end.lower() in ["present", "current", "now", "ongoing", ""]:
-                                    end_year = datetime.now().year
-                                elif end_match:
-                                    end_year = int(end_match.group())
-                                else:
-                                    end_year = datetime.now().year
-                                
-                                years = end_year - start_year
-                                if years > 0:
-                                    total_years += years
-                        except Exception as e:
-                            print(f"Error parsing dates: {e}")
-                            pass
-                
-                # Also check if experience has 'years' or 'duration' field directly
-                if total_years == 0:
-                    for exp in experience:
-                        years = exp.get("years") or exp.get("duration") or 0
-                        if isinstance(years, (int, float)):
-                            total_years += int(years)
-                
-                # Fallback: estimate from skills years
-                if total_years == 0 and skills_list:
-                    max_skill_years = 0
-                    for s in skills_list:
-                        skill_years = s.get("years") or s.get("experience") or 0
-                        if isinstance(skill_years, (int, float)) and skill_years > max_skill_years:
-                            max_skill_years = int(skill_years)
-                    if max_skill_years > 0:
-                        total_years = max_skill_years
-                
-                if total_years > 0:
-                    profile.years_experience = total_years
-                    print(f"Calculated years of experience: {total_years}")
-                
-                # Build summary from parsed data
-                skills_list = parsed_data.get("skills", [])
-                skill_names = [s.get("name", "") for s in skills_list[:5]]
-                if skill_names and experience:
-                    profile.summary = f"Experienced {profile.headline or 'professional'} with expertise in {', '.join(skill_names)}."
-                
-                # Set desired role same as current headline
-                if profile.headline:
-                    profile.desired_role = f"Senior {profile.headline}"
-                
-                # Add skills to profile
-                for skill_data in skills_list:
-                    skill_name = skill_data.get("name", "").strip()
-                    if not skill_name:
-                        continue
-                    
-                    # Find skill in database (case-insensitive)
-                    skill = db.execute(
-                        select(Skill).where(Skill.name.ilike(f"%{skill_name}%"))
-                    ).scalar_one_or_none()
-                    
-                    if skill:
-                        # Check if already added
-                        existing = db.execute(
-                            select(ProfileSkill)
-                            .where(ProfileSkill.profile_id == profile.id)
-                            .where(ProfileSkill.skill_id == skill.id)
-                        ).scalar_one_or_none()
-                        
-                        if not existing:
-                            proficiency = skill_data.get("proficiency", "intermediate")
-                            years = skill_data.get("years", 0)
-                            
-                            profile_skill = ProfileSkill(
-                                profile_id=profile.id,
-                                skill_id=skill.id,
-                                proficiency_level=proficiency,
-                                years_experience=float(years) if years else None,
-                                is_primary=False,
-                                source="parsed"
-                            )
-                            db.add(profile_skill)
-                
-                profile.updated_at = datetime.utcnow()
+
     except Exception as e:
+        logger.error(f"❌ Resume parsing failed: {e}")
         import traceback
         traceback.print_exc()
+        parsed_data = None
 
+    # ── Save parsed data to profile ──
+    if parsed_data:
+        profile.parsed_json_draft = parsed_data
+        profile.verification_score = parsed_data.get("meta", {}).get("overall_confidence", 0.7)
+
+        # ★ RESET all profile columns first — prevents old resume data from persisting
+        profile.headline = None
+        profile.summary = None
+        profile.location_city = None
+        profile.location_country = None
+        profile.years_experience = 0
+        profile.desired_role = None
+        profile.desired_salary_min = None
+        profile.desired_salary_max = None
+
+        pi = parsed_data.get("personal_info", {})
+
+        # Update user name (always overwrite with new resume)
+        try:
+            user = db.get(User, current_user.user_id)
+            if user:
+                fn = pi.get("first_name") or ""
+                ln = pi.get("last_name") or ""
+                if fn:
+                    user.first_name = fn
+                if ln:
+                    user.last_name = ln
+        except Exception:
+            pass
+
+        # Location
+        loc = pi.get("location", {})
+        if isinstance(loc, dict):
+            profile.location_city = loc.get("city") or None
+            profile.location_country = loc.get("country") or None
+        elif isinstance(loc, str) and loc:
+            if "," in loc:
+                parts = loc.split(",")
+                profile.location_city = parts[0].strip()
+                profile.location_country = parts[-1].strip()
+            else:
+                profile.location_city = loc
+
+        # Headline
+        if pi.get("headline"):
+            profile.headline = pi["headline"]
+        else:
+            exps = parsed_data.get("experience", [])
+            if exps and isinstance(exps[0], dict) and exps[0].get("job_title"):
+                profile.headline = exps[0]["job_title"]
+
+        # Summary
+        if pi.get("summary"):
+            profile.summary = pi["summary"]
+        else:
+            skills_data = parsed_data.get("skills", {})
+            all_skills = []
+            if isinstance(skills_data, dict):
+                for cat in ["skills_technologies", "tools_platforms", "programming_languages", "frameworks", "tools", "technical_skills"]:
+                    all_skills.extend(skills_data.get(cat, [])[:3])
+            elif isinstance(skills_data, list):
+                all_skills = [s.get("name", "") for s in skills_data[:6]]
+            if all_skills and profile.headline:
+                profile.summary = f"Experienced {profile.headline} with expertise in {', '.join(all_skills[:6])}."
+
+        # Desired role — always derive from current resume
+        if pi.get("desired_role"):
+            profile.desired_role = pi["desired_role"]
+        elif profile.headline:
+            profile.desired_role = profile.headline
+
+        # Years of experience — always set (0 for freshers)
+        profile.years_experience = _calc_years(parsed_data)
+
+        # ── Add skills to ProfileSkill table ──
+        _sync_profile_skills(db, profile, parsed_data)
+
+    profile.resume_s3_path = s3_path
+    profile.updated_at = datetime.utcnow()
     db.commit()
-    return {"message": "Resume uploaded successfully", "s3_path": s3_path, "parsed": parsed_data is not None}
+
+    return {
+        "message": "Resume uploaded and parsed successfully",
+        "s3_path": s3_path,
+        "parsed": parsed_data is not None,
+        "stats": parsed_data.get("meta", {}).get("review", {}).get("stats") if parsed_data else None,
+    }
+
+
+def _calc_years(parsed_data: dict) -> int:
+    """Calculate total years of experience."""
+    # Check for explicit years statement
+    pi = parsed_data.get("personal_info", {})
+    pi_text = str(pi)
+    m = re.search(r'(\d+)\+?\s*[Yy]ears?\s*[Ee]xperience', pi_text)
+    if m:
+        return int(m.group(1))
+
+    # Calculate from date ranges
+    all_years = set()
+    for exp in parsed_data.get("experience", []):
+        start = str(exp.get("start_date") or "").strip()
+        end = str(exp.get("end_date") or "present").strip()
+        if not start:
+            continue
+        try:
+            start_match = re.search(r'(19|20)\d{2}', start)
+            end_match = re.search(r'(19|20)\d{2}', end)
+            if start_match:
+                all_years.add(int(start_match.group()))
+                if end.lower() in ["present", "current", "now", "ongoing", "till date", ""]:
+                    all_years.add(datetime.now().year)
+                elif end_match:
+                    all_years.add(int(end_match.group()))
+        except Exception:
+            pass
+
+    if len(all_years) >= 2:
+        return max(all_years) - min(all_years)
+    return 0
+
+
+def _sync_profile_skills(db: Session, profile: Profile, parsed_data: dict):
+    """Sync skills from parsed resume into ProfileSkill table."""
+    skills_data = parsed_data.get("skills", {})
+
+    skill_entries = []
+    proficiency_map = {}
+
+    if isinstance(skills_data, dict):
+        for cat, items in skills_data.items():
+            if cat == "skill_proficiency":
+                continue
+            if isinstance(items, list):
+                for name in items:
+                    if isinstance(name, str) and name.strip():
+                        skill_entries.append({"name": name.strip(), "category": cat})
+
+        for sp in skills_data.get("skill_proficiency", []):
+            if isinstance(sp, dict):
+                proficiency_map[sp.get("skill", "").lower()] = {
+                    "level": sp.get("level", "intermediate"),
+                    "years": sp.get("years"),
+                }
+    elif isinstance(skills_data, list):
+        for s in skills_data:
+            if isinstance(s, dict) and s.get("name"):
+                skill_entries.append({"name": s["name"].strip(), "category": "technical"})
+    else:
+        return
+
+    added = 0
+    for entry in skill_entries:
+        skill_name = entry["name"]
+        if not skill_name or len(skill_name) < 2:
+            continue
+
+        skill = db.execute(
+            select(Skill).where(Skill.name.ilike(skill_name))
+        ).scalar_one_or_none()
+
+        if not skill:
+            skill = db.execute(
+                select(Skill).where(Skill.name.ilike(f"%{skill_name}%"))
+            ).scalars().first()
+
+        if not skill:
+            continue
+
+        existing = db.execute(
+            select(ProfileSkill)
+            .where(ProfileSkill.profile_id == profile.id)
+            .where(ProfileSkill.skill_id == skill.id)
+        ).scalar_one_or_none()
+
+        if existing:
+            continue
+
+        prof_info = proficiency_map.get(skill_name.lower(), {})
+        proficiency = prof_info.get("level", "intermediate")
+        years = prof_info.get("years")
+
+        profile_skill = ProfileSkill(
+            profile_id=profile.id,
+            skill_id=skill.id,
+            proficiency_level=proficiency,
+            years_experience=float(years) if years else None,
+            is_primary=False,
+            source="parsed",
+        )
+        db.add(profile_skill)
+        added += 1
+
+    logger.info(f"Added {added} skills to profile from {len(skill_entries)} extracted")
 
 
 @router.post("/me/verify")
@@ -327,6 +475,7 @@ async def verify_profile(
     profile.updated_at = datetime.utcnow()
 
     try:
+        from app.services import embedding_service, milvus_service
         embedding = embedding_service.generate_profile_embedding({
             "headline": profile.headline,
             "summary": profile.summary,
@@ -419,64 +568,49 @@ async def remove_skill(
     db.commit()
     return {"message": "Skill removed successfully"}
 
+
 @router.get("/candidate/{user_id}")
 async def get_candidate_profile(
     user_id: str,
     current_user: TokenData = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """
-    View a candidate's profile.
-    For recruiters - tracks profile views and sends notification to candidate.
-    """
-    # Get the candidate's profile
+    """View a candidate's profile."""
     profile = db.execute(
         select(Profile).where(Profile.user_id == user_id)
     ).scalar_one_or_none()
-    
+
     if not profile:
         raise HTTPException(status_code=404, detail="Profile not found")
-    
-    # Get candidate user info
+
     candidate = db.execute(
         select(User).where(User.id == user_id)
     ).scalar_one_or_none()
-    
+
     if not candidate:
         raise HTTPException(status_code=404, detail="User not found")
-    
-    # Track profile view if viewer is a recruiter
+
     if current_user.role == "recruiter" and current_user.user_id != user_id:
         try:
             from app.services.notification_service import NotificationService
-            
-            # Get recruiter info
             recruiter = db.execute(
                 select(User).where(User.id == current_user.user_id)
             ).scalar_one_or_none()
-            
             if recruiter:
                 viewer_name = f"{recruiter.first_name} {recruiter.last_name}".strip() or recruiter.email
-                # You can add company_name to User model or use a default
-                company_name = "a company"  # Can be enhanced later
-                
                 NotificationService.notify_profile_view(
-                    db=db,
-                    candidate_id=user_id,
-                    viewer_id=current_user.user_id,
-                    viewer_name=viewer_name,
-                    company_name=company_name
+                    db=db, candidate_id=user_id, viewer_id=current_user.user_id,
+                    viewer_name=viewer_name, company_name="a company"
                 )
         except Exception as e:
-            print(f"Profile view notification error: {e}")
-    
-    # Get profile skills
+            logger.warning(f"Profile view notification error: {e}")
+
     profile_skills = db.execute(
         select(ProfileSkill, Skill)
         .join(Skill)
         .where(ProfileSkill.profile_id == profile.id)
     ).all()
-    
+
     skills = [
         {
             "skill_id": ps.ProfileSkill.skill_id,
@@ -486,7 +620,7 @@ async def get_candidate_profile(
         }
         for ps in profile_skills
     ]
-    
+
     return {
         "id": profile.id,
         "user_id": profile.user_id,

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -34,6 +34,7 @@ export default function MyJobsPage() {
         return;
       }
 
+      // Use the new getMyJobs API endpoint
       const response = await api.getMyJobs();
       setJobs(response.jobs || []);
     } catch (err: any) {
@@ -47,6 +48,7 @@ export default function MyJobsPage() {
     setActionLoading(job.id);
     try {
       await api.updateJob(job.id, { is_active: !job.is_active });
+      // Refresh jobs list
       const response = await api.getMyJobs();
       setJobs(response.jobs || []);
     } catch (err: any) {
@@ -64,6 +66,7 @@ export default function MyJobsPage() {
     setActionLoading(jobId);
     try {
       await api.deleteJob(jobId);
+      // Refresh jobs list
       const response = await api.getMyJobs();
       setJobs(response.jobs || []);
     } catch (err: any) {
@@ -97,7 +100,7 @@ export default function MyJobsPage() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <Link href="/recruiter" className="text-gray-600 hover:text-gray-900">
-              &larr; Back to Dashboard
+              â† Back to Dashboard
             </Link>
             <h1 className="text-2xl font-bold text-gray-900">My Posted Jobs</h1>
           </div>
@@ -175,9 +178,7 @@ export default function MyJobsPage() {
         {/* Jobs List */}
         {filteredJobs.length === 0 ? (
           <div className="bg-white rounded-lg shadow p-12 text-center">
-            <svg className="mx-auto h-16 w-16 text-gray-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
+            <div className="text-gray-400 text-6xl mb-4">ðŸ“‹</div>
             <h3 className="text-xl font-medium text-gray-900 mb-2">
               {filter === 'all' ? 'No jobs posted yet' : `No ${filter} jobs`}
             </h3>
@@ -220,29 +221,16 @@ export default function MyJobsPage() {
                     </div>
                     <p className="text-gray-600 mb-2">{job.company_name}</p>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                      <span className="flex items-center gap-1">
-                        <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                        {job.location_city || 'Not specified'}{job.location_country ? `, ${job.location_country}` : ''}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                        {job.location_type}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                        {job.employment_type?.replace('_', ' ')}
-                      </span>
+                      <span>ðŸ“ {job.location_city || 'Not specified'}, {job.location_country || ''}</span>
+                      <span>ðŸ¢ {job.location_type}</span>
+                      <span>ðŸ’¼ {job.employment_type?.replace('_', ' ')}</span>
                       {job.salary_min && job.salary_max && (
-                        <span className="flex items-center gap-1">
-                          <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                          {job.salary_currency || 'USD'} {job.salary_min.toLocaleString()} - {job.salary_max.toLocaleString()}
+                        <span>
+                          ðŸ’° {job.salary_currency || 'USD'} {job.salary_min.toLocaleString()} - {job.salary_max.toLocaleString()}
                         </span>
                       )}
                       {job.experience_min_years !== undefined && job.experience_min_years !== null && (
-                        <span className="flex items-center gap-1">
-                          <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                          {job.experience_min_years}+ years exp
-                        </span>
+                        <span>ðŸ“… {job.experience_min_years}+ years exp</span>
                       )}
                     </div>
                     {job.description_raw && (
@@ -267,7 +255,7 @@ export default function MyJobsPage() {
                       href={`/recruiter/jobs/${job.id}/edit`}
                       className="px-4 py-2 text-sm text-purple-600 bg-purple-50 rounded hover:bg-purple-100 text-center"
                     >
-                      Edit
+                      âœï¸ Edit
                     </Link>
                     <button
                       onClick={() => handleToggleActive(job)}
@@ -285,7 +273,7 @@ export default function MyJobsPage() {
                       disabled={actionLoading === job.id}
                       className="px-4 py-2 text-sm text-red-600 bg-red-50 rounded hover:bg-red-100 disabled:opacity-50"
                     >
-                      {actionLoading === job.id ? '...' : 'Delete'}
+                      {actionLoading === job.id ? '...' : 'ðŸ—‘ï¸ Delete'}
                     </button>
                   </div>
                 </div>
@@ -297,3 +285,4 @@ export default function MyJobsPage() {
     </div>
   );
 }
+

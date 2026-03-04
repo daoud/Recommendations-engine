@@ -1,0 +1,1169 @@
+[2026-03-04T00:00:15.337+0000] {processor.py:161} INFO - Started process (PID=17081) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:00:15.342+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:00:15.348+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:00:15.347+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:00:15.380+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:00:15.483+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:00:15.483+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:00:15.503+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:00:15.502+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:00:15.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.212 seconds
+[2026-03-04T00:00:46.033+0000] {processor.py:161} INFO - Started process (PID=17091) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:00:46.034+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:00:46.035+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:00:46.035+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:00:46.061+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:00:46.082+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:00:46.082+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:00:46.098+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:00:46.098+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:00:46.133+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.103 seconds
+[2026-03-04T00:01:17.577+0000] {processor.py:161} INFO - Started process (PID=17101) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:01:17.580+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:01:17.607+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:01:17.606+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:01:17.858+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:01:17.926+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:01:17.926+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:01:17.990+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:01:17.990+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:01:18.084+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.512 seconds
+[2026-03-04T00:01:48.819+0000] {processor.py:161} INFO - Started process (PID=17111) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:01:48.821+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:01:48.826+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:01:48.823+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:01:48.861+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:01:48.888+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:01:48.888+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:01:48.921+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:01:48.921+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:01:48.973+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.158 seconds
+[2026-03-04T00:02:19.672+0000] {processor.py:161} INFO - Started process (PID=17121) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:02:19.673+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:02:19.674+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:02:19.674+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:02:19.701+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:02:19.723+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:02:19.723+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:02:19.743+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:02:19.743+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:02:19.788+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.120 seconds
+[2026-03-04T00:02:50.364+0000] {processor.py:161} INFO - Started process (PID=17131) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:02:50.365+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:02:50.366+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:02:50.366+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:02:50.398+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:02:50.430+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:02:50.430+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:02:50.457+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:02:50.456+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:02:50.495+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.135 seconds
+[2026-03-04T00:03:20.603+0000] {processor.py:161} INFO - Started process (PID=17141) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:03:20.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:03:20.606+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:03:20.605+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:03:20.634+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:03:20.651+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:03:20.651+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:03:20.667+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:03:20.667+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:03:20.784+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.185 seconds
+[2026-03-04T00:03:51.314+0000] {processor.py:161} INFO - Started process (PID=17151) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:03:51.316+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:03:51.317+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:03:51.317+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:03:51.354+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:03:51.370+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:03:51.370+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:03:51.386+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:03:51.386+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:03:51.421+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.110 seconds
+[2026-03-04T00:04:21.835+0000] {processor.py:161} INFO - Started process (PID=17161) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:04:21.836+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:04:21.837+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:04:21.837+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:04:21.857+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:04:21.875+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:04:21.875+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:04:21.896+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:04:21.895+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:04:21.932+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.100 seconds
+[2026-03-04T00:04:52.443+0000] {processor.py:161} INFO - Started process (PID=17171) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:04:52.444+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:04:52.446+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:04:52.446+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:04:52.467+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:04:52.487+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:04:52.487+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:04:52.508+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:04:52.508+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:04:52.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.105 seconds
+[2026-03-04T00:05:23.028+0000] {processor.py:161} INFO - Started process (PID=17181) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:05:23.029+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:05:23.030+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:05:23.030+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:05:23.051+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:05:23.071+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:05:23.070+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:05:23.090+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:05:23.090+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:05:23.137+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.112 seconds
+[2026-03-04T00:05:53.631+0000] {processor.py:161} INFO - Started process (PID=17191) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:05:53.632+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:05:53.634+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:05:53.633+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:05:53.664+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:05:53.685+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:05:53.685+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:05:53.705+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:05:53.705+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:05:53.749+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.121 seconds
+[2026-03-04T00:06:24.742+0000] {processor.py:161} INFO - Started process (PID=17201) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:06:24.747+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:06:24.752+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:06:24.751+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:06:24.904+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:06:24.944+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:06:24.943+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:06:24.982+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:06:24.981+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:06:25.044+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.312 seconds
+[2026-03-04T00:06:55.496+0000] {processor.py:161} INFO - Started process (PID=17211) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:06:55.497+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:06:55.498+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:06:55.497+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:06:55.522+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:06:55.547+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:06:55.547+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:06:55.569+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:06:55.569+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:06:55.611+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.118 seconds
+[2026-03-04T00:07:26.218+0000] {processor.py:161} INFO - Started process (PID=17221) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:07:26.219+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:07:26.220+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:07:26.220+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:07:26.246+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:07:26.266+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:07:26.265+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:07:26.285+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:07:26.285+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:07:26.316+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.101 seconds
+[2026-03-04T00:07:56.804+0000] {processor.py:161} INFO - Started process (PID=17231) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:07:56.805+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:07:56.806+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:07:56.806+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:07:56.836+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:07:56.858+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:07:56.858+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:07:56.879+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:07:56.879+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:07:56.907+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.106 seconds
+[2026-03-04T00:08:27.326+0000] {processor.py:161} INFO - Started process (PID=17241) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:08:27.327+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:08:27.328+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:08:27.328+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:08:27.349+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:08:27.367+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:08:27.367+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:08:27.383+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:08:27.383+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:08:27.411+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.087 seconds
+[2026-03-04T00:08:57.848+0000] {processor.py:161} INFO - Started process (PID=17251) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:08:57.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:08:57.851+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:08:57.851+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:08:57.877+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:08:57.896+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:08:57.896+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:08:57.915+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:08:57.915+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:08:57.951+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.106 seconds
+[2026-03-04T00:09:28.443+0000] {processor.py:161} INFO - Started process (PID=17261) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:09:28.445+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:09:28.447+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:09:28.446+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:09:28.474+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:09:28.495+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:09:28.495+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:09:28.519+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:09:28.519+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:09:28.555+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.117 seconds
+[2026-03-04T00:09:59.030+0000] {processor.py:161} INFO - Started process (PID=17271) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:09:59.031+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:09:59.032+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:09:59.032+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:09:59.057+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:09:59.081+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:09:59.081+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:09:59.101+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:09:59.101+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:09:59.129+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.102 seconds
+[2026-03-04T00:10:29.624+0000] {processor.py:161} INFO - Started process (PID=17281) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:10:29.625+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:10:29.626+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:10:29.626+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:10:29.648+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:10:29.668+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:10:29.667+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:10:29.683+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:10:29.683+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:10:29.714+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.092 seconds
+[2026-03-04T00:11:00.430+0000] {processor.py:161} INFO - Started process (PID=17291) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:11:00.431+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:11:00.432+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:11:00.432+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:11:00.460+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:11:00.484+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:11:00.484+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:11:00.517+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:11:00.517+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:11:00.563+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.138 seconds
+[2026-03-04T00:11:31.007+0000] {processor.py:161} INFO - Started process (PID=17301) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:11:31.008+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:11:31.010+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:11:31.009+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:11:31.028+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:11:31.046+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:11:31.046+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:11:31.062+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:11:31.061+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:11:31.098+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.093 seconds
+[2026-03-04T00:12:01.530+0000] {processor.py:161} INFO - Started process (PID=17311) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:12:01.531+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:12:01.533+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:12:01.532+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:12:01.559+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:12:01.578+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:12:01.578+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:12:01.596+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:12:01.596+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:12:01.629+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.103 seconds
+[2026-03-04T00:12:31.876+0000] {processor.py:161} INFO - Started process (PID=17321) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:12:31.877+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:12:31.878+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:12:31.878+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:12:31.899+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:12:31.930+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:12:31.929+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:12:31.954+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:12:31.954+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:12:31.992+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.120 seconds
+[2026-03-04T00:13:02.524+0000] {processor.py:161} INFO - Started process (PID=17331) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:13:02.525+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:13:02.526+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:13:02.526+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:13:02.568+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:13:02.608+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:13:02.608+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:13:02.652+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:13:02.651+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:13:02.701+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.181 seconds
+[2026-03-04T00:13:33.093+0000] {processor.py:161} INFO - Started process (PID=17341) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:13:33.094+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:13:33.096+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:13:33.095+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:13:33.116+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:13:33.136+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:13:33.136+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:13:33.152+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:13:33.151+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:13:33.184+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.093 seconds
+[2026-03-04T00:14:03.448+0000] {processor.py:161} INFO - Started process (PID=17351) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:14:03.449+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:14:03.451+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:14:03.450+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:14:03.482+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:14:03.510+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:14:03.509+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:14:03.531+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:14:03.531+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:14:03.564+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.120 seconds
+[2026-03-04T00:14:34.028+0000] {processor.py:161} INFO - Started process (PID=17361) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:14:34.030+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:14:34.032+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:14:34.032+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:14:34.065+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:14:34.088+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:14:34.088+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:14:34.111+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:14:34.111+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:14:34.144+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.122 seconds
+[2026-03-04T00:15:04.754+0000] {processor.py:161} INFO - Started process (PID=17371) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:15:04.755+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:15:04.756+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:15:04.756+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:15:04.784+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:15:04.810+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:15:04.810+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:15:04.832+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:15:04.832+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:15:04.872+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.123 seconds
+[2026-03-04T00:15:35.885+0000] {processor.py:161} INFO - Started process (PID=17381) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:15:35.886+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:15:35.887+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:15:35.886+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:15:35.906+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:15:35.925+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:15:35.925+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:15:35.939+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:15:35.939+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:15:35.972+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.090 seconds
+[2026-03-04T00:16:06.560+0000] {processor.py:161} INFO - Started process (PID=17391) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:16:06.561+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:16:06.562+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:16:06.562+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:16:06.583+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:16:06.601+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:16:06.601+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:16:06.618+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:16:06.618+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:16:06.651+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.093 seconds
+[2026-03-04T00:16:37.049+0000] {processor.py:161} INFO - Started process (PID=17401) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:16:37.050+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:16:37.051+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:16:37.051+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:16:37.081+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:16:37.109+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:16:37.109+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:16:37.514+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:16:37.513+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:16:37.557+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.511 seconds
+[2026-03-04T00:17:08.479+0000] {processor.py:161} INFO - Started process (PID=17411) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:17:08.480+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:17:08.482+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:17:08.482+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:17:08.518+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:17:08.543+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:17:08.542+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:17:08.681+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:17:08.681+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:17:08.713+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.237 seconds
+[2026-03-04T00:17:38.964+0000] {processor.py:161} INFO - Started process (PID=17421) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:17:38.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:17:38.974+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:17:38.974+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:17:39.138+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:17:39.227+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:17:39.226+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:17:39.310+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:17:39.310+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:17:39.697+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.738 seconds
+[2026-03-04T00:18:09.916+0000] {processor.py:161} INFO - Started process (PID=17431) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:18:09.917+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:18:09.918+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:18:09.917+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:18:09.942+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:18:09.961+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:18:09.961+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:18:09.978+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:18:09.978+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:18:10.012+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.100 seconds
+[2026-03-04T00:18:40.240+0000] {processor.py:161} INFO - Started process (PID=17441) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:18:40.242+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:18:40.249+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:18:40.248+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:18:40.324+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:18:40.368+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:18:40.367+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:18:40.398+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:18:40.398+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:18:40.459+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.224 seconds
+[2026-03-04T00:19:10.923+0000] {processor.py:161} INFO - Started process (PID=17451) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:19:10.924+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:19:10.926+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:19:10.925+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:19:10.954+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:19:10.984+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:19:10.983+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:19:11.005+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:19:11.005+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:19:11.041+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.122 seconds
+[2026-03-04T00:19:47.174+0000] {processor.py:161} INFO - Started process (PID=17461) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:19:47.176+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:19:47.178+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:19:47.177+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:19:47.221+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:19:47.257+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:19:47.257+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:19:47.294+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:19:47.294+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:19:47.355+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.187 seconds
+[2026-03-04T00:20:17.625+0000] {processor.py:161} INFO - Started process (PID=17471) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:20:17.626+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:20:17.627+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:20:17.626+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:20:17.645+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:20:17.665+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:20:17.665+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:20:17.683+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:20:17.683+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:20:17.720+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.098 seconds
+[2026-03-04T00:20:48.466+0000] {processor.py:161} INFO - Started process (PID=17481) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:20:48.468+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:20:48.470+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:20:48.469+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:20:48.498+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:20:48.535+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:20:48.535+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:20:48.558+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:20:48.558+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:20:48.613+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.151 seconds
+[2026-03-04T00:21:19.157+0000] {processor.py:161} INFO - Started process (PID=17491) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:21:19.159+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:21:19.161+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:21:19.160+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:21:19.193+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:21:19.217+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:21:19.217+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:21:19.240+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:21:19.240+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:21:19.282+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.129 seconds
+[2026-03-04T00:21:49.831+0000] {processor.py:161} INFO - Started process (PID=17501) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:21:49.833+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:21:49.834+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:21:49.834+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:21:49.860+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:21:49.879+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:21:49.879+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:21:49.896+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:21:49.895+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:21:49.931+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.104 seconds
+[2026-03-04T00:22:20.289+0000] {processor.py:161} INFO - Started process (PID=17511) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:22:20.290+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:22:20.291+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:22:20.290+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:22:20.308+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:22:20.326+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:22:20.326+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:22:20.349+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:22:20.349+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:22:20.382+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.097 seconds
+[2026-03-04T00:22:50.614+0000] {processor.py:161} INFO - Started process (PID=17521) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:22:50.615+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:22:50.616+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:22:50.616+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:22:50.638+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:22:50.657+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:22:50.657+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:22:50.676+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:22:50.675+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:22:50.719+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.108 seconds
+[2026-03-04T00:23:21.629+0000] {processor.py:161} INFO - Started process (PID=17531) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:23:21.632+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:23:21.633+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:23:21.633+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:23:21.658+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:23:21.680+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:23:21.680+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:23:21.696+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:23:21.696+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:23:21.741+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.115 seconds
+[2026-03-04T00:23:52.197+0000] {processor.py:161} INFO - Started process (PID=17541) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:23:52.199+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:23:52.200+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:23:52.199+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:23:52.224+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:23:52.243+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:23:52.243+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:23:52.265+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:23:52.265+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:23:52.299+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.106 seconds
+[2026-03-04T00:24:22.597+0000] {processor.py:161} INFO - Started process (PID=17551) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:24:22.598+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:24:22.600+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:24:22.599+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:24:22.632+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:24:22.653+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:24:22.653+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:24:22.675+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:24:22.675+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:24:22.713+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.120 seconds
+[2026-03-04T00:24:53.030+0000] {processor.py:161} INFO - Started process (PID=17561) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:24:53.031+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:24:53.032+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:24:53.031+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:24:53.062+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:24:53.083+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:24:53.082+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:24:53.101+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:24:53.100+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:24:53.140+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.114 seconds
+[2026-03-04T00:25:23.685+0000] {processor.py:161} INFO - Started process (PID=17571) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:25:23.686+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:25:23.688+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:25:23.687+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:25:23.715+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:25:23.735+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:25:23.735+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:25:23.754+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:25:23.754+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:25:23.789+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.107 seconds
+[2026-03-04T00:25:54.116+0000] {processor.py:161} INFO - Started process (PID=17581) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:25:54.117+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:25:54.118+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:25:54.118+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:25:54.135+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:25:54.152+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:25:54.152+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:25:54.167+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:25:54.167+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:25:54.204+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.092 seconds
+[2026-03-04T00:26:24.761+0000] {processor.py:161} INFO - Started process (PID=17591) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:26:24.763+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:26:24.764+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:26:24.763+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:26:24.798+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:26:24.822+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:26:24.822+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:26:24.844+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:26:24.843+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:26:24.884+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.127 seconds
+[2026-03-04T00:26:55.141+0000] {processor.py:161} INFO - Started process (PID=17601) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:26:55.142+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:26:55.144+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:26:55.143+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:26:55.161+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:26:55.178+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:26:55.178+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:26:55.192+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:26:55.191+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:26:55.249+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.110 seconds
+[2026-03-04T00:27:25.650+0000] {processor.py:161} INFO - Started process (PID=17611) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:27:25.651+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:27:25.652+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:27:25.652+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:27:25.670+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:27:25.687+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:27:25.687+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:27:25.704+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:27:25.704+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:27:25.735+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.089 seconds
+[2026-03-04T00:27:56.059+0000] {processor.py:161} INFO - Started process (PID=17621) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:27:56.060+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:27:56.062+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:27:56.061+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:27:56.082+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:27:56.104+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:27:56.104+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:27:56.128+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:27:56.128+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:27:56.168+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.113 seconds
+[2026-03-04T00:28:26.486+0000] {processor.py:161} INFO - Started process (PID=17631) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:28:26.487+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:28:26.488+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:28:26.488+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:28:26.512+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:28:26.530+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:28:26.530+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:28:26.546+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:28:26.545+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:28:26.585+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.102 seconds
+[2026-03-04T00:28:56.988+0000] {processor.py:161} INFO - Started process (PID=17641) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:28:56.990+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:28:56.991+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:28:56.990+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:28:57.016+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:28:57.035+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:28:57.034+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:28:57.050+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:28:57.049+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:28:57.094+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.109 seconds
+[2026-03-04T00:29:27.485+0000] {processor.py:161} INFO - Started process (PID=17651) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:29:27.486+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:29:27.487+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:29:27.487+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:29:27.512+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:29:27.539+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:29:27.539+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:29:27.568+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:29:27.568+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:29:27.619+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.137 seconds
+[2026-03-04T00:29:57.991+0000] {processor.py:161} INFO - Started process (PID=17661) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:29:57.992+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:29:57.993+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:29:57.993+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:29:58.011+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:29:58.028+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:29:58.028+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:29:58.043+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:29:58.043+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:29:58.078+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.090 seconds
+[2026-03-04T00:30:28.316+0000] {processor.py:161} INFO - Started process (PID=17671) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:30:28.317+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:30:28.319+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:30:28.318+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:30:28.346+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:30:28.369+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:30:28.369+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:30:28.395+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:30:28.395+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:30:28.430+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.119 seconds
+[2026-03-04T00:30:58.830+0000] {processor.py:161} INFO - Started process (PID=17681) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:30:58.831+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:30:58.832+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:30:58.832+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:30:58.862+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:30:58.885+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:30:58.885+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:30:58.908+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:30:58.908+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:30:58.940+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.114 seconds
+[2026-03-04T00:31:30.580+0000] {processor.py:161} INFO - Started process (PID=17691) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:31:30.583+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:31:30.585+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:31:30.585+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:31:30.611+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:31:30.632+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:31:30.632+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:31:30.659+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:31:30.659+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:31:30.687+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.110 seconds
+[2026-03-04T00:32:00.990+0000] {processor.py:161} INFO - Started process (PID=17701) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:32:00.992+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:32:00.993+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:32:00.992+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:32:01.016+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:32:01.038+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:32:01.037+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:32:01.059+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:32:01.059+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:32:01.091+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.104 seconds
+[2026-03-04T00:32:31.702+0000] {processor.py:161} INFO - Started process (PID=17711) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:32:31.703+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:32:31.706+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:32:31.705+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:32:31.776+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:32:31.821+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:32:31.821+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:32:31.876+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:32:31.875+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:32:31.946+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.250 seconds
+[2026-03-04T00:33:02.998+0000] {processor.py:161} INFO - Started process (PID=17721) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:33:02.999+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T00:33:03.000+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:33:03.000+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:33:03.024+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T00:33:03.044+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:33:03.043+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T00:33:03.062+0000] {logging_mixin.py:188} INFO - [2026-03-04T00:33:03.062+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T00:33:03.109+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.115 seconds
+[2026-03-04T02:57:23.662+0000] {processor.py:161} INFO - Started process (PID=17738) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:57:23.668+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T02:57:23.670+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:57:23.669+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:57:23.789+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:57:23.869+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:57:23.869+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T02:57:23.961+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:57:23.961+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T02:57:24.066+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.416 seconds
+[2026-03-04T02:57:54.512+0000] {processor.py:161} INFO - Started process (PID=17748) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:57:54.514+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T02:57:54.516+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:57:54.515+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:57:54.544+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:57:54.568+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:57:54.567+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T02:57:54.592+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:57:54.591+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T02:57:54.618+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.109 seconds
+[2026-03-04T02:58:25.057+0000] {processor.py:161} INFO - Started process (PID=17758) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:58:25.059+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T02:58:25.060+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:58:25.060+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:58:25.084+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T02:58:25.102+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:58:25.102+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T02:58:25.121+0000] {logging_mixin.py:188} INFO - [2026-03-04T02:58:25.121+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-03 18:00:00+00:00, run_after=2026-03-04 00:00:00+00:00
+[2026-03-04T02:58:25.146+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.091 seconds
+[2026-03-04T07:39:52.840+0000] {processor.py:161} INFO - Started process (PID=17778) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T07:39:52.844+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T07:39:52.852+0000] {logging_mixin.py:188} INFO - [2026-03-04T07:39:52.848+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T07:39:52.925+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T07:39:52.993+0000] {logging_mixin.py:188} INFO - [2026-03-04T07:39:52.992+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T07:39:53.059+0000] {logging_mixin.py:188} INFO - [2026-03-04T07:39:53.059+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T07:39:53.115+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.279 seconds
+[2026-03-04T07:40:23.660+0000] {processor.py:161} INFO - Started process (PID=17788) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T07:40:23.662+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T07:40:23.663+0000] {logging_mixin.py:188} INFO - [2026-03-04T07:40:23.662+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T07:40:23.689+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T07:40:23.718+0000] {logging_mixin.py:188} INFO - [2026-03-04T07:40:23.717+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T07:40:23.750+0000] {logging_mixin.py:188} INFO - [2026-03-04T07:40:23.749+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T07:40:23.781+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.124 seconds
+[2026-03-04T08:33:14.178+0000] {processor.py:161} INFO - Started process (PID=17806) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:33:14.207+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:33:14.212+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:33:14.211+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:33:14.320+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:33:14.381+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:33:14.380+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:33:14.429+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:33:14.429+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:33:14.475+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.336 seconds
+[2026-03-04T08:33:44.998+0000] {processor.py:161} INFO - Started process (PID=17816) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:33:44.999+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:33:45.001+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:33:45.000+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:33:45.024+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:33:45.044+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:33:45.044+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:33:45.060+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:33:45.060+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:33:45.083+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.089 seconds
+[2026-03-04T08:34:15.678+0000] {processor.py:161} INFO - Started process (PID=17826) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:34:15.679+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:34:15.680+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:34:15.680+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:34:15.708+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:34:15.733+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:34:15.733+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:34:15.758+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:34:15.757+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:34:15.785+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.110 seconds
+[2026-03-04T08:34:46.143+0000] {processor.py:161} INFO - Started process (PID=17836) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:34:46.145+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:34:46.146+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:34:46.146+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:34:46.173+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:34:46.196+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:34:46.196+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:34:46.215+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:34:46.215+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:34:46.245+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.105 seconds
+[2026-03-04T08:35:16.653+0000] {processor.py:161} INFO - Started process (PID=17846) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:35:16.654+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:35:16.655+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:35:16.655+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:35:16.693+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:35:16.713+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:35:16.713+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:35:16.734+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:35:16.734+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:35:16.763+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.113 seconds
+[2026-03-04T08:35:47.126+0000] {processor.py:161} INFO - Started process (PID=17856) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:35:47.127+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:35:47.129+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:35:47.129+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:35:47.172+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:35:47.197+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:35:47.197+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:35:47.216+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:35:47.216+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:35:47.239+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.117 seconds
+[2026-03-04T08:36:17.631+0000] {processor.py:161} INFO - Started process (PID=17866) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:36:17.632+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:36:17.634+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:36:17.633+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:36:17.667+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:36:17.688+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:36:17.688+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:36:17.705+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:36:17.705+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:36:17.725+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.097 seconds
+[2026-03-04T08:36:47.983+0000] {processor.py:161} INFO - Started process (PID=17876) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:36:47.986+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:36:47.988+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:36:47.988+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:36:48.024+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:36:48.052+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:36:48.051+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:36:48.075+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:36:48.075+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:36:48.106+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.127 seconds
+[2026-03-04T08:37:18.512+0000] {processor.py:161} INFO - Started process (PID=17886) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:37:18.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:37:18.515+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:37:18.514+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:37:18.539+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:37:18.557+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:37:18.557+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:37:18.576+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:37:18.576+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:37:18.604+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.096 seconds
+[2026-03-04T08:37:48.822+0000] {processor.py:161} INFO - Started process (PID=17896) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:37:48.823+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:37:48.825+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:37:48.824+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:37:48.852+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:37:48.874+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:37:48.874+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:37:48.895+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:37:48.895+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:37:48.923+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.104 seconds
+[2026-03-04T08:43:52.766+0000] {processor.py:161} INFO - Started process (PID=17915) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:43:52.771+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:43:52.782+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:43:52.781+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:43:52.839+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:43:52.922+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:43:52.921+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:43:52.968+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:43:52.968+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:43:53.080+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.319 seconds
+[2026-03-04T08:44:23.602+0000] {processor.py:161} INFO - Started process (PID=17925) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:44:23.603+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T08:44:23.604+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:44:23.604+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:44:23.626+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T08:44:23.644+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:44:23.644+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T08:44:23.658+0000] {logging_mixin.py:188} INFO - [2026-03-04T08:44:23.658+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T08:44:23.683+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.084 seconds
+[2026-03-04T09:48:45.467+0000] {processor.py:161} INFO - Started process (PID=17944) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:48:45.470+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:48:45.472+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:48:45.471+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:48:45.642+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:48:45.683+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:48:45.682+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:48:45.778+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:48:45.778+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:48:45.897+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.443 seconds
+[2026-03-04T09:49:16.417+0000] {processor.py:161} INFO - Started process (PID=17954) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:49:16.420+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:49:16.421+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:49:16.421+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:49:16.456+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:49:16.491+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:49:16.490+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:49:16.518+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:49:16.518+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:49:16.564+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.153 seconds
+[2026-03-04T09:49:46.922+0000] {processor.py:161} INFO - Started process (PID=17964) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:49:46.925+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:49:46.927+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:49:46.927+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:49:46.958+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:49:46.992+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:49:46.992+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:49:47.019+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:49:47.019+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:49:47.051+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.135 seconds
+[2026-03-04T09:50:17.445+0000] {processor.py:161} INFO - Started process (PID=17974) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:50:17.447+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:50:17.449+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:50:17.448+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:50:17.500+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:50:17.548+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:50:17.547+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:50:17.580+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:50:17.580+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:50:17.621+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.181 seconds
+[2026-03-04T09:50:47.990+0000] {processor.py:161} INFO - Started process (PID=17984) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:50:47.992+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:50:47.994+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:50:47.993+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:50:48.036+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:50:48.073+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:50:48.073+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:50:48.099+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:50:48.099+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:50:48.130+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.144 seconds
+[2026-03-04T09:51:18.499+0000] {processor.py:161} INFO - Started process (PID=17994) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:51:18.500+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:51:18.501+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:51:18.501+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:51:18.527+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:51:18.550+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:51:18.549+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:51:18.577+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:51:18.577+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:51:18.608+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.112 seconds
+[2026-03-04T09:51:49.108+0000] {processor.py:161} INFO - Started process (PID=18004) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:51:49.109+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:51:49.110+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:51:49.110+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:51:49.143+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:51:49.187+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:51:49.187+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:51:49.226+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:51:49.225+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:51:49.262+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.157 seconds
+[2026-03-04T09:52:19.674+0000] {processor.py:161} INFO - Started process (PID=18014) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:52:19.676+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:52:19.677+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:52:19.677+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:52:19.710+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:52:19.751+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:52:19.751+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:52:19.796+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:52:19.796+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:52:19.849+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.180 seconds
+[2026-03-04T09:52:50.497+0000] {processor.py:161} INFO - Started process (PID=18024) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:52:50.499+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:52:50.501+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:52:50.500+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:52:50.541+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:52:50.575+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:52:50.574+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:52:50.601+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:52:50.600+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:52:50.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.150 seconds
+[2026-03-04T09:53:21.086+0000] {processor.py:161} INFO - Started process (PID=18034) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:53:21.088+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:53:21.089+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:53:21.089+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:53:21.119+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:53:21.152+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:53:21.152+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:53:21.179+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:53:21.179+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:53:21.241+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.159 seconds
+[2026-03-04T09:53:51.854+0000] {processor.py:161} INFO - Started process (PID=18044) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:53:51.856+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:53:51.857+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:53:51.857+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:53:51.896+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:53:51.921+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:53:51.921+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:53:51.950+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:53:51.950+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:53:52.003+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.153 seconds
+[2026-03-04T09:54:22.196+0000] {processor.py:161} INFO - Started process (PID=18054) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:54:22.197+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T09:54:22.198+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:54:22.198+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:54:22.225+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T09:54:22.258+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:54:22.258+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T09:54:22.277+0000] {logging_mixin.py:188} INFO - [2026-03-04T09:54:22.277+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T09:54:22.314+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.120 seconds
+[2026-03-04T10:35:38.724+0000] {processor.py:161} INFO - Started process (PID=18073) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:35:38.726+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:35:38.727+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:35:38.727+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:35:38.829+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:35:38.958+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:35:38.957+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:35:39.054+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:35:39.053+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:35:39.219+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.500 seconds
+[2026-03-04T10:36:10.081+0000] {processor.py:161} INFO - Started process (PID=18083) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:36:10.083+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:36:10.084+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:36:10.084+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:36:10.122+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:36:10.156+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:36:10.155+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:36:10.193+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:36:10.192+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:36:10.231+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.155 seconds
+[2026-03-04T10:36:40.917+0000] {processor.py:161} INFO - Started process (PID=18093) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:36:40.920+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:36:40.922+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:36:40.922+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:36:40.974+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:36:41.047+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:36:41.046+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:36:41.103+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:36:41.102+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:36:41.184+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.272 seconds
+[2026-03-04T10:37:11.815+0000] {processor.py:161} INFO - Started process (PID=18103) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:37:11.816+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:37:11.817+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:37:11.817+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:37:11.882+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:37:11.916+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:37:11.916+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:37:11.978+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:37:11.978+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:37:12.022+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.211 seconds
+[2026-03-04T10:37:44.784+0000] {processor.py:161} INFO - Started process (PID=18113) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:37:44.804+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:37:44.822+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:37:44.820+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:37:45.192+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:37:45.272+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:37:45.272+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:37:45.342+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:37:45.341+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:37:45.398+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.630 seconds
+[2026-03-04T10:38:16.849+0000] {processor.py:161} INFO - Started process (PID=18123) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:38:16.851+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:38:16.860+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:38:16.857+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:38:16.988+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:38:17.128+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:38:17.127+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:38:17.201+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:38:17.201+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:38:17.303+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.459 seconds
+[2026-03-04T10:38:47.971+0000] {processor.py:161} INFO - Started process (PID=18133) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:38:47.974+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:38:47.982+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:38:47.981+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:38:48.039+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:38:48.088+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:38:48.088+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:38:48.140+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:38:48.139+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:38:48.208+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.244 seconds
+[2026-03-04T10:39:18.764+0000] {processor.py:161} INFO - Started process (PID=18143) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:39:18.776+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:39:18.778+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:39:18.777+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:39:18.819+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:39:18.854+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:39:18.853+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:39:18.888+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:39:18.887+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:39:18.957+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.198 seconds
+[2026-03-04T10:39:49.719+0000] {processor.py:161} INFO - Started process (PID=18153) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:39:49.721+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:39:49.723+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:39:49.723+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:39:49.774+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:39:49.813+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:39:49.813+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:39:49.848+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:39:49.848+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:39:49.890+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.175 seconds
+[2026-03-04T10:40:20.565+0000] {processor.py:161} INFO - Started process (PID=18163) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:40:20.570+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:40:20.573+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:40:20.572+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:40:20.612+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:40:20.638+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:40:20.638+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:40:20.669+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:40:20.668+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:40:20.694+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.133 seconds
+[2026-03-04T10:40:54.111+0000] {processor.py:161} INFO - Started process (PID=18173) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:40:54.113+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:40:54.116+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:40:54.114+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:40:54.197+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:40:54.252+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:40:54.252+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:40:54.312+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:40:54.311+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:40:54.359+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.253 seconds
+[2026-03-04T10:41:25.930+0000] {processor.py:161} INFO - Started process (PID=18183) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:41:25.942+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:41:25.945+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:41:25.944+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:41:26.008+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:41:26.064+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:41:26.063+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:41:26.103+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:41:26.103+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:41:26.165+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.248 seconds
+[2026-03-04T10:41:56.416+0000] {processor.py:161} INFO - Started process (PID=18193) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:41:56.418+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:41:56.422+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:41:56.421+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:41:56.465+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:41:56.500+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:41:56.500+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:41:56.526+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:41:56.526+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:41:56.584+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.177 seconds
+[2026-03-04T10:42:27.117+0000] {processor.py:161} INFO - Started process (PID=18203) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:42:27.123+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:42:27.128+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:42:27.127+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:42:27.310+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:42:27.377+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:42:27.377+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:42:27.437+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:42:27.437+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:42:27.511+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.399 seconds
+[2026-03-04T10:42:58.239+0000] {processor.py:161} INFO - Started process (PID=18213) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:42:58.242+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:42:58.246+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:42:58.244+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:42:58.308+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:42:58.348+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:42:58.347+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:42:58.390+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:42:58.390+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:42:58.449+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.215 seconds
+[2026-03-04T10:43:29.519+0000] {processor.py:161} INFO - Started process (PID=18223) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:43:29.521+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:43:29.523+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:43:29.522+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:43:29.567+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:43:29.604+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:43:29.603+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:43:29.675+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:43:29.675+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:43:29.720+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.208 seconds
+[2026-03-04T10:44:00.558+0000] {processor.py:161} INFO - Started process (PID=18233) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:44:00.560+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:44:00.562+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:44:00.561+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:44:00.615+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:44:00.669+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:44:00.668+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:44:00.728+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:44:00.728+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:44:00.795+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.246 seconds
+[2026-03-04T10:44:31.602+0000] {processor.py:161} INFO - Started process (PID=18243) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:44:31.612+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:44:31.615+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:44:31.615+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:44:31.653+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:44:31.706+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:44:31.705+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:44:32.154+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:44:32.153+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:44:32.224+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.631 seconds
+[2026-03-04T10:45:02.962+0000] {processor.py:161} INFO - Started process (PID=18253) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:45:02.967+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:45:02.970+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:45:02.969+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:45:03.022+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:45:03.062+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:45:03.062+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:45:03.104+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:45:03.104+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:45:03.372+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.414 seconds
+[2026-03-04T10:45:33.964+0000] {processor.py:161} INFO - Started process (PID=18263) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:45:33.966+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:45:33.969+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:45:33.968+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:45:34.029+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:45:34.075+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:45:34.074+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:45:34.126+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:45:34.122+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:45:34.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.683 seconds
+[2026-03-04T10:46:05.484+0000] {processor.py:161} INFO - Started process (PID=18273) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:46:05.488+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:46:05.490+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:46:05.489+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:46:05.538+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:46:05.575+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:46:05.575+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:46:05.604+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:46:05.603+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:46:05.851+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.372 seconds
+[2026-03-04T10:46:36.488+0000] {processor.py:161} INFO - Started process (PID=18283) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:46:36.497+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:46:36.503+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:46:36.502+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:46:36.546+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:46:36.581+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:46:36.581+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:46:36.609+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:46:36.609+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:46:36.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.158 seconds
+[2026-03-04T10:47:07.217+0000] {processor.py:161} INFO - Started process (PID=18293) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:47:07.219+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:47:07.231+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:47:07.222+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:47:07.405+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:47:07.518+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:47:07.517+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:47:07.694+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:47:07.682+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:47:07.879+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.676 seconds
+[2026-03-04T10:47:38.430+0000] {processor.py:161} INFO - Started process (PID=18303) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:47:38.432+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:47:38.433+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:47:38.433+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:47:38.506+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:47:38.539+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:47:38.538+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:47:38.580+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:47:38.579+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:47:38.604+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.177 seconds
+[2026-03-04T10:48:08.917+0000] {processor.py:161} INFO - Started process (PID=18313) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:48:08.919+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:48:08.920+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:48:08.920+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:48:08.951+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:48:08.973+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:48:08.972+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:48:08.992+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:48:08.991+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:48:09.018+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.104 seconds
+[2026-03-04T10:48:39.342+0000] {processor.py:161} INFO - Started process (PID=18323) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:48:39.344+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:48:39.345+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:48:39.345+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:48:39.390+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:48:39.434+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:48:39.434+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:48:39.466+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:48:39.466+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:48:39.534+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.196 seconds
+[2026-03-04T10:49:09.826+0000] {processor.py:161} INFO - Started process (PID=18333) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:49:09.827+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:49:09.830+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:49:09.830+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:49:09.867+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:49:09.888+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:49:09.887+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:49:09.906+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:49:09.905+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:49:09.931+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.108 seconds
+[2026-03-04T10:49:40.388+0000] {processor.py:161} INFO - Started process (PID=18343) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:49:40.389+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:49:40.391+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:49:40.390+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:49:40.427+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:49:40.480+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:49:40.480+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:49:40.536+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:49:40.536+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:49:40.608+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.224 seconds
+[2026-03-04T10:50:13.280+0000] {processor.py:161} INFO - Started process (PID=18353) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:50:13.289+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:50:13.297+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:50:13.296+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:50:13.375+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:50:13.469+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:50:13.468+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:50:13.564+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:50:13.563+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:50:13.715+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.441 seconds
+[2026-03-04T10:50:45.929+0000] {processor.py:161} INFO - Started process (PID=18363) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:50:45.934+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:50:45.940+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:50:45.937+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:50:45.989+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:50:46.039+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:50:46.038+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:50:46.086+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:50:46.085+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:50:46.258+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.337 seconds
+[2026-03-04T10:51:16.882+0000] {processor.py:161} INFO - Started process (PID=18373) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:51:16.884+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:51:16.886+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:51:16.885+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:51:17.018+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:51:17.084+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:51:17.083+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:51:17.185+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:51:17.184+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:51:17.325+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.448 seconds
+[2026-03-04T10:51:47.485+0000] {processor.py:161} INFO - Started process (PID=18383) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:51:47.490+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:51:47.500+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:51:47.499+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:51:47.596+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:51:47.654+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:51:47.653+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:51:47.710+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:51:47.710+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:51:47.861+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.381 seconds
+[2026-03-04T10:52:19.468+0000] {processor.py:161} INFO - Started process (PID=18393) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:52:19.471+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:52:19.483+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:52:19.482+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:52:19.579+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:52:19.674+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:52:19.673+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:52:19.772+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:52:19.771+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:52:19.911+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.450 seconds
+[2026-03-04T10:52:50.219+0000] {processor.py:161} INFO - Started process (PID=18403) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:52:50.224+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:52:50.226+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:52:50.225+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:52:50.289+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:52:50.373+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:52:50.372+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:52:50.413+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:52:50.413+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:52:50.466+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.252 seconds
+[2026-03-04T10:53:21.059+0000] {processor.py:161} INFO - Started process (PID=18413) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:53:21.070+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:53:21.073+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:53:21.073+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:53:21.184+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:53:21.256+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:53:21.255+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:53:21.338+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:53:21.337+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:53:21.446+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.401 seconds
+[2026-03-04T10:53:52.061+0000] {processor.py:161} INFO - Started process (PID=18423) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:53:52.062+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:53:52.064+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:53:52.063+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:53:52.109+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:53:52.161+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:53:52.160+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:53:52.201+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:53:52.201+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:53:52.270+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.213 seconds
+[2026-03-04T10:54:22.812+0000] {processor.py:161} INFO - Started process (PID=18433) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:54:22.814+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:54:22.816+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:54:22.815+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:54:22.860+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:54:22.916+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:54:22.915+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:54:22.948+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:54:22.948+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:54:23.034+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.227 seconds
+[2026-03-04T10:54:54.213+0000] {processor.py:161} INFO - Started process (PID=18443) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:54:54.226+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:54:54.233+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:54:54.232+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:54:54.457+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:54:54.560+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:54:54.560+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:54:54.632+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:54:54.630+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:54:54.704+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.498 seconds
+[2026-03-04T10:55:25.303+0000] {processor.py:161} INFO - Started process (PID=18453) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:55:25.309+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:55:25.318+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:55:25.312+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:55:25.383+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:55:25.427+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:55:25.426+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:55:25.495+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:55:25.495+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:55:25.613+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.324 seconds
+[2026-03-04T10:55:56.260+0000] {processor.py:161} INFO - Started process (PID=18463) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:55:56.264+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:55:56.269+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:55:56.268+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:55:56.333+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:55:56.396+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:55:56.386+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:55:56.464+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:55:56.463+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:55:56.544+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.290 seconds
+[2026-03-04T10:56:27.279+0000] {processor.py:161} INFO - Started process (PID=18473) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:56:27.282+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:56:27.285+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:56:27.284+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:56:27.368+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:56:27.412+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:56:27.412+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:56:27.445+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:56:27.445+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:56:27.494+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.222 seconds
+[2026-03-04T10:57:06.056+0000] {processor.py:161} INFO - Started process (PID=18483) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:57:06.061+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:57:06.063+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:57:06.062+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:57:06.196+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:57:06.377+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:57:06.377+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:57:06.506+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:57:06.506+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:57:06.656+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.616 seconds
+[2026-03-04T10:57:36.866+0000] {processor.py:161} INFO - Started process (PID=18493) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:57:36.868+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:57:36.870+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:57:36.869+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:57:36.914+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:57:36.953+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:57:36.952+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:57:37.002+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:57:37.002+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:57:37.069+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.209 seconds
+[2026-03-04T10:58:08.518+0000] {processor.py:161} INFO - Started process (PID=18503) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:58:08.525+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:58:08.532+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:58:08.527+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:58:08.623+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:58:08.716+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:58:08.715+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:58:08.807+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:58:08.806+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:58:08.947+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.434 seconds
+[2026-03-04T10:58:39.918+0000] {processor.py:161} INFO - Started process (PID=18513) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:58:39.934+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:58:39.938+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:58:39.936+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:58:40.124+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:58:40.268+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:58:40.267+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:58:40.364+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:58:40.363+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:58:40.444+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.541 seconds
+[2026-03-04T10:59:10.712+0000] {processor.py:161} INFO - Started process (PID=18523) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:59:10.713+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:59:10.719+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:59:10.718+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:59:10.828+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:59:10.851+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:59:10.851+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:59:10.881+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:59:10.881+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:59:10.916+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.208 seconds
+[2026-03-04T10:59:41.871+0000] {processor.py:161} INFO - Started process (PID=18533) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:59:41.875+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T10:59:41.884+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:59:41.883+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:59:41.966+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T10:59:42.069+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:59:42.068+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T10:59:42.176+0000] {logging_mixin.py:188} INFO - [2026-03-04T10:59:42.176+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T10:59:42.376+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.517 seconds
+[2026-03-04T11:00:13.396+0000] {processor.py:161} INFO - Started process (PID=18543) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:00:13.397+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:00:13.399+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:00:13.398+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:00:13.438+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:00:13.469+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:00:13.469+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:00:13.502+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:00:13.501+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:00:13.562+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.171 seconds
+[2026-03-04T11:00:43.733+0000] {processor.py:161} INFO - Started process (PID=18553) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:00:43.737+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:00:43.740+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:00:43.739+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:00:43.866+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:00:43.935+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:00:43.934+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:00:44.017+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:00:44.016+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:00:44.082+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.364 seconds
+[2026-03-04T11:01:15.289+0000] {processor.py:161} INFO - Started process (PID=18563) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:01:15.291+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:01:15.293+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:01:15.292+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:01:15.329+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:01:15.353+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:01:15.353+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:01:15.382+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:01:15.382+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:01:15.438+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.155 seconds
+[2026-03-04T11:01:46.261+0000] {processor.py:161} INFO - Started process (PID=18573) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:01:46.262+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:01:46.264+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:01:46.264+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:01:46.472+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:01:46.510+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:01:46.510+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:01:46.532+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:01:46.532+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:01:46.571+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.316 seconds
+[2026-03-04T11:02:17.332+0000] {processor.py:161} INFO - Started process (PID=18583) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:02:17.342+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:02:17.376+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:02:17.375+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:02:17.469+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:02:17.523+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:02:17.523+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:02:17.576+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:02:17.575+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:02:17.668+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.343 seconds
+[2026-03-04T11:02:47.908+0000] {processor.py:161} INFO - Started process (PID=18593) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:02:47.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:02:47.910+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:02:47.910+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:02:47.946+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:02:47.984+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:02:47.983+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:02:48.029+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:02:48.028+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:02:48.079+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.174 seconds
+[2026-03-04T11:03:19.781+0000] {processor.py:161} INFO - Started process (PID=18603) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:03:19.783+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:03:19.785+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:03:19.784+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:03:19.896+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:03:19.993+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:03:19.993+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:03:20.100+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:03:20.099+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:03:20.251+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.482 seconds
+[2026-03-04T11:03:50.979+0000] {processor.py:161} INFO - Started process (PID=18613) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:03:50.981+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:03:50.984+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:03:50.983+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:03:51.024+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:03:51.057+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:03:51.057+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:03:51.087+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:03:51.087+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:03:51.172+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.199 seconds
+[2026-03-04T11:04:21.514+0000] {processor.py:161} INFO - Started process (PID=18623) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:04:21.518+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:04:21.523+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:04:21.521+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:04:21.592+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:04:21.623+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:04:21.623+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:04:21.645+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:04:21.644+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:04:21.694+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.187 seconds
+[2026-03-04T11:04:52.329+0000] {processor.py:161} INFO - Started process (PID=18633) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:04:52.331+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:04:52.333+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:04:52.332+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:04:52.379+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:04:52.419+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:04:52.418+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:04:52.453+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:04:52.453+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:04:52.497+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.175 seconds
+[2026-03-04T11:05:23.248+0000] {processor.py:161} INFO - Started process (PID=18643) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:05:23.260+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:05:23.267+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:05:23.266+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:05:23.426+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:05:23.493+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:05:23.493+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:05:23.582+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:05:23.579+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:05:23.740+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.508 seconds
+[2026-03-04T11:05:54.871+0000] {processor.py:161} INFO - Started process (PID=18653) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:05:54.873+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:05:54.876+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:05:54.875+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:05:54.912+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:05:54.945+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:05:54.945+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:05:54.975+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:05:54.974+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:05:55.014+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.147 seconds
+[2026-03-04T11:06:25.635+0000] {processor.py:161} INFO - Started process (PID=18663) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:06:25.647+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:06:25.652+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:06:25.651+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:06:25.716+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:06:25.754+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:06:25.753+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:06:25.788+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:06:25.787+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:06:25.849+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.219 seconds
+[2026-03-04T11:06:56.818+0000] {processor.py:161} INFO - Started process (PID=18673) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:06:56.821+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:06:56.824+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:06:56.822+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:06:56.896+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:06:56.962+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:06:56.957+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:06:57.015+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:06:57.014+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:06:57.098+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.288 seconds
+[2026-03-04T11:07:27.615+0000] {processor.py:161} INFO - Started process (PID=18683) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:07:27.616+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:07:27.618+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:07:27.617+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:07:27.704+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:07:27.735+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:07:27.734+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:07:27.759+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:07:27.759+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:07:27.800+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.190 seconds
+[2026-03-04T11:07:58.453+0000] {processor.py:161} INFO - Started process (PID=18693) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:07:58.455+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:07:58.456+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:07:58.456+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:07:58.536+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:07:58.577+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:07:58.577+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:07:58.606+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:07:58.606+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:07:58.647+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.198 seconds
+[2026-03-04T11:08:29.167+0000] {processor.py:161} INFO - Started process (PID=18703) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:08:29.173+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:08:29.178+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:08:29.177+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:08:29.215+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:08:29.246+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:08:29.246+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:08:29.263+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:08:29.263+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:08:29.300+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.139 seconds
+[2026-03-04T11:08:59.736+0000] {processor.py:161} INFO - Started process (PID=18713) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:08:59.737+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:08:59.739+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:08:59.738+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:08:59.774+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:08:59.804+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:08:59.804+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:08:59.825+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:08:59.825+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:08:59.870+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.140 seconds
+[2026-03-04T11:09:30.313+0000] {processor.py:161} INFO - Started process (PID=18723) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:09:30.315+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:09:30.321+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:09:30.320+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:09:30.384+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:09:30.454+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:09:30.454+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:09:30.501+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:09:30.501+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:09:30.588+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.279 seconds
+[2026-03-04T11:10:01.278+0000] {processor.py:161} INFO - Started process (PID=18733) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:10:01.282+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:10:01.284+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:10:01.283+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:10:01.371+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:10:01.409+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:10:01.408+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:10:01.479+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:10:01.478+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:10:01.606+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.332 seconds
+[2026-03-04T11:10:32.677+0000] {processor.py:161} INFO - Started process (PID=18743) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:10:32.695+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:10:32.697+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:10:32.696+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:10:32.835+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:10:32.936+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:10:32.936+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:10:33.015+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:10:33.014+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:10:33.095+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.433 seconds
+[2026-03-04T11:11:03.346+0000] {processor.py:161} INFO - Started process (PID=18753) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:11:03.362+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:11:03.364+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:11:03.363+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:11:03.478+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:11:03.612+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:11:03.611+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:11:03.659+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:11:03.659+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:11:03.706+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.375 seconds
+[2026-03-04T11:11:33.838+0000] {processor.py:161} INFO - Started process (PID=18763) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:11:33.841+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:11:33.843+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:11:33.843+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:11:33.878+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:11:33.918+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:11:33.918+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:11:33.950+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:11:33.949+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:11:33.984+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.150 seconds
+[2026-03-04T11:12:04.197+0000] {processor.py:161} INFO - Started process (PID=18773) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:12:04.199+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:12:04.201+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:12:04.200+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:12:04.232+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:12:04.253+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:12:04.252+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:12:04.281+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:12:04.280+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:12:04.324+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.131 seconds
+[2026-03-04T11:12:34.842+0000] {processor.py:161} INFO - Started process (PID=18783) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:12:34.844+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:12:34.845+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:12:34.845+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:12:34.889+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:12:34.923+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:12:34.923+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:12:34.968+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:12:34.967+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:12:35.027+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.189 seconds
+[2026-03-04T11:13:05.550+0000] {processor.py:161} INFO - Started process (PID=18793) to work on /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:13:05.551+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/recommendation_generation_dag.py for tasks to queue
+[2026-03-04T11:13:05.553+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:13:05.552+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:13:05.606+0000] {processor.py:840} INFO - DAG(s) 'recommendation_generation_pipeline' retrieved from /opt/airflow/dags/recommendation_generation_dag.py
+[2026-03-04T11:13:05.632+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:13:05.631+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-04T11:13:05.651+0000] {logging_mixin.py:188} INFO - [2026-03-04T11:13:05.651+0000] {dag.py:3823} INFO - Setting next_dagrun for recommendation_generation_pipeline to 2026-03-04 00:00:00+00:00, run_after=2026-03-04 06:00:00+00:00
+[2026-03-04T11:13:05.693+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/recommendation_generation_dag.py took 0.146 seconds

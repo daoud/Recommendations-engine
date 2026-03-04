@@ -2,7 +2,10 @@
 Models Package
 Export all SQLAlchemy models
 """
-
+from app.models.user import User, Profile, generate_uuid
+from app.models.skill import SkillCategory, Skill, SkillAlias, ProfileSkill
+from app.models.job import JobSource, Job, JobSkill, Application, RecruiterAction
+from app.models.user import User
 from app.models.user import User, Profile, generate_uuid
 from app.models.skill import SkillCategory, Skill, SkillAlias, ProfileSkill
 from app.models.job import JobSource, Job, JobSkill, Application, RecruiterAction

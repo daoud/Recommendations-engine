@@ -22,14 +22,14 @@ Password: password123
 Log in with one of these recruiter accounts:
 
 
-daoud028@gmail.com
+daoud@gmail.com
 pwd: ilove1986
 daoud.edgrow@gmail.com
  pwd: ilove1986
 
   Recruiter Passwords Fixed
 EmailPassword
-recruiter3@test.com
+recruiter3@test.com (i am using this to upload the jobs for data science)
 password123
 recruiter@techcorp.com
 password123

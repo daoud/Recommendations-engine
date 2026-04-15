@@ -255,6 +255,15 @@ async def verify_email(
     user.email_verified = True
     user.verification_otp = None
     user.verification_otp_expires = None
+
+    # Also mark candidate profile as verified
+    if user.role == "candidate":
+        profile = db.execute(
+            select(Profile).where(Profile.user_id == user.id)
+        ).scalar_one_or_none()
+        if profile:
+            profile.is_verified = True
+
     db.commit()
 
     return {"message": "Email verified successfully!"}

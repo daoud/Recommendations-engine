@@ -130,13 +130,15 @@ async def get_job_recommendations(
     profile = db.execute(
         select(Profile).where(Profile.user_id == current_user.user_id)
     ).scalar_one_or_none()
-    
+
     if not profile:
         raise HTTPException(status_code=404, detail="Profile not found. Please create your profile first.")
-    
-    if not profile.is_verified:
+
+    # Accept either profile verified by admin OR email verified by OTP
+    user = db.execute(select(User).where(User.id == current_user.user_id)).scalar_one_or_none()
+    if not profile.is_verified and not (user and user.email_verified):
         raise HTTPException(
-            status_code=400, 
+            status_code=400,
             detail="Profile must be verified to get recommendations. Please complete profile verification."
         )
     

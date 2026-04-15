@@ -107,6 +107,7 @@ export interface Skill {
   slug: string;
   skill_type: string;
   category_id?: string;
+  category?: string;
 }
 
 export interface Recommendation {

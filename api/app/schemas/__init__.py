@@ -15,7 +15,9 @@ from app.schemas.user import (
     ProfileResponse,
     ProfileWithSkills,
     Token,
-    TokenData
+    TokenData,
+    ForgotPasswordRequest,
+    ResetPasswordRequest
 )
 
 from app.schemas.job import (
@@ -46,6 +48,8 @@ __all__ = [
     "ProfileWithSkills",
     "Token",
     "TokenData",
+    "ForgotPasswordRequest",
+    "ResetPasswordRequest",
     
     # Job
     "JobSkillInput",

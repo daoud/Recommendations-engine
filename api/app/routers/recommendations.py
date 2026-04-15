@@ -478,6 +478,65 @@ async def mark_viewed(
 
 
 # ============================================
+# 3b. GET /recommendations/cover-letter/{job_id}
+# ============================================
+@router.get("/cover-letter/{job_id}")
+async def generate_cover_letter(
+    job_id: str,
+    current_user: TokenData = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Generate an AI cover letter tailored to the candidate's profile and the job."""
+    # Load user + profile
+    user = db.execute(select(User).where(User.id == current_user.user_id)).scalar_one_or_none()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    profile = db.execute(select(Profile).where(Profile.user_id == current_user.user_id)).scalar_one_or_none()
+
+    # Load job
+    job = db.execute(select(Job).where(Job.id == job_id)).scalar_one_or_none()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+
+    # Load job skills
+    job_skill_rows = db.execute(
+        select(JobSkill, Skill).join(Skill, JobSkill.skill_id == Skill.id).where(JobSkill.job_id == job_id)
+    ).all()
+    job_skill_names = [s.name for _, s in job_skill_rows]
+
+    # Load candidate skills
+    profile_skill_rows = db.execute(
+        select(ProfileSkill, Skill).join(Skill, ProfileSkill.skill_id == Skill.id)
+        .where(ProfileSkill.profile_id == profile.id)
+    ).all() if profile else []
+    candidate_skill_names = [s.name for _, s in profile_skill_rows]
+
+    # Build candidate info from profile
+    candidate_name = f"{user.first_name or ''} {user.last_name or ''}".strip() or user.email
+    headline = (profile.headline or "") if profile else ""
+    summary = (profile.summary or "") if profile else ""
+    years_exp = (profile.years_experience or 0) if profile else 0
+
+    cover_letter = llm_service.generate_cover_letter(
+        candidate_name=candidate_name,
+        candidate_headline=headline,
+        candidate_summary=summary,
+        candidate_skills=candidate_skill_names,
+        years_experience=years_exp,
+        job_title=job.title,
+        company_name=job.company_name,
+        job_description=job.description_raw or "",
+        job_skills=job_skill_names,
+    )
+
+    if not cover_letter:
+        raise HTTPException(status_code=503, detail="AI service unavailable. Please try again.")
+
+    return {"cover_letter": cover_letter}
+
+
+# ============================================
 # 4. GET /recommendations/skill-gaps
 # ============================================
 @router.get("/skill-gaps")

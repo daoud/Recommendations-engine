@@ -320,6 +320,49 @@ Respond with ONLY the JSON."""
             return self._extract_json(response)
         return None
 
+    def generate_cover_letter(
+        self,
+        candidate_name: str,
+        candidate_headline: str,
+        candidate_summary: str,
+        candidate_skills: list,
+        years_experience: int,
+        job_title: str,
+        company_name: str,
+        job_description: str,
+        job_skills: list,
+    ) -> Optional[str]:
+        """Generate a personalised cover letter for a candidate applying to a job."""
+        system_prompt = (
+            "You are a professional career coach who writes compelling, concise cover letters. "
+            "Write in first-person. Use a professional but warm tone. "
+            "Do NOT add any placeholder text like [Your Name] or [Date]. "
+            "Return only the cover letter text, nothing else."
+        )
+
+        skills_str = ", ".join(candidate_skills[:20]) if candidate_skills else "various technical skills"
+        job_skills_str = ", ".join(job_skills[:15]) if job_skills else "relevant skills"
+
+        prompt = f"""Write a professional cover letter for the following candidate and job.
+
+CANDIDATE PROFILE:
+- Name: {candidate_name}
+- Headline: {candidate_headline or 'Software Professional'}
+- Summary: {candidate_summary or 'Experienced professional looking for new opportunities.'}
+- Years of Experience: {years_experience}
+- Key Skills: {skills_str}
+
+JOB DETAILS:
+- Job Title: {job_title}
+- Company: {company_name}
+- Required Skills: {job_skills_str}
+- Job Description (excerpt): {(job_description or '')[:800]}
+
+Write a 3-paragraph cover letter (opening, why I'm a great fit, closing with call to action).
+Keep it under 300 words. Do not use any placeholder brackets."""
+
+        return self._call_llm(prompt, system_prompt, temperature=0.7, max_tokens=600)
+
 
 # Global instance
 llm_service = LLMService()

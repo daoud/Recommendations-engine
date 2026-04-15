@@ -116,6 +116,71 @@ function migrateSkills(raw: any): Skills {
   return { skills_technologies: allS, tools_platforms: allT };
 }
 
+/* ─── Skill Auto-Correct ─── */
+
+// Canonical skill names – the "source of truth" spellings
+const SKILL_CANONICAL = [
+  // Languages
+  'Python','JavaScript','TypeScript','Java','C++','C#','Go','Rust','Ruby','PHP','Swift','Kotlin','Scala','R','MATLAB','Perl','Bash','Shell','COBOL','Fortran','Dart','Elixir','Haskell','Lua','Groovy','Assembly',
+  // Frontend
+  'React','Vue','Angular','Next.js','Nuxt.js','Svelte','jQuery','HTML','CSS','Tailwind CSS','Bootstrap','Sass','LESS','Redux','Webpack','Vite','Gatsby',
+  // Backend
+  'Node.js','Express','FastAPI','Django','Flask','Spring Boot','Laravel','Rails','ASP.NET','NestJS','Fiber','Gin','Echo',
+  // Databases
+  'MySQL','PostgreSQL','MongoDB','Redis','SQLite','Oracle','SQL Server','DynamoDB','Cassandra','Elasticsearch','CouchDB','InfluxDB','Neo4j','MariaDB','Supabase','Firebase','PlanetScale',
+  // Cloud & DevOps
+  'AWS','Azure','GCP','Docker','Kubernetes','Terraform','Ansible','Jenkins','Git','GitHub','GitLab','Bitbucket','Helm','ArgoCD','Prometheus','Grafana','Nginx','Apache','Linux','Ubuntu','CI/CD','CloudFormation',
+  // Data & ML
+  'Machine Learning','Deep Learning','NLP','Computer Vision','TensorFlow','PyTorch','Keras','Scikit-learn','Pandas','NumPy','Matplotlib','Seaborn','Plotly','OpenCV','XGBoost','LightGBM','Hugging Face','LangChain','LlamaIndex','RAG','MLflow','MLOps',
+  // Big Data
+  'Spark','Hadoop','Kafka','Airflow','Databricks','Snowflake','BigQuery','Flink','Hive','Presto','dbt','Nifi',
+  // AI/LLM
+  'OpenAI','LLaMA','GPT','Claude','Gemini','Mistral','Ollama','AutoGen','CrewAI','LangGraph','SageMaker','Vertex AI','Bedrock','Pinecone','Milvus','FAISS','Chroma','Weaviate','Qdrant',
+  // Tools
+  'Power BI','Tableau','Excel','Figma','JIRA','Confluence','Notion','Postman','Swagger','GraphQL','REST API','gRPC','WebSockets','Microservices','Kubernetes','Terraform',
+  // Mobile
+  'React Native','Flutter','iOS','Android','Xamarin','Ionic',
+  // Other
+  'Blockchain','Web3','Solidity','Smart Contracts','Cybersecurity','Penetration Testing','DevSecOps','Agile','Scrum','Data Engineering','Data Science','Data Analysis','Business Intelligence',
+];
+
+function levenshtein(a: string, b: string): number {
+  const dp: number[] = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    let prev = i;
+    for (let j = 1; j <= b.length; j++) {
+      const curr = a[i - 1] === b[j - 1] ? dp[j - 1] : 1 + Math.min(dp[j - 1], dp[j], prev);
+      dp[j - 1] = prev;
+      prev = curr;
+    }
+    dp[b.length] = prev;
+  }
+  return dp[b.length];
+}
+
+function autocorrectSkill(input: string): { corrected: string; changed: boolean } {
+  const trimmed = input.trim();
+  if (!trimmed) return { corrected: trimmed, changed: false };
+  const lower = trimmed.toLowerCase();
+
+  // Exact case-insensitive match → just fix capitalisation
+  const exact = SKILL_CANONICAL.find(s => s.toLowerCase() === lower);
+  if (exact) return { corrected: exact, changed: exact !== trimmed };
+
+  // Find closest match within edit-distance threshold
+  const threshold = Math.max(2, Math.floor(lower.length * 0.38));
+  let bestSkill = trimmed;
+  let bestDist = Infinity;
+
+  for (const skill of SKILL_CANONICAL) {
+    const dist = levenshtein(lower, skill.toLowerCase());
+    if (dist < bestDist) { bestDist = dist; bestSkill = skill; }
+  }
+
+  if (bestDist <= threshold) return { corrected: bestSkill, changed: true };
+  return { corrected: trimmed, changed: false };
+}
+
 /* ─── UI Components ─── */
 const I = ({ d, c = '' }: { d: string; c?: string }) => (
   <svg className={`w-5 h-5 ${c}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.8}>
@@ -167,9 +232,27 @@ const TArea = ({ label, value, onChange, rows = 3 }: any) => (
   </div>
 );
 
-const Tags = ({ label, items, onRemove, onAdd, color = 'blue' }: { label: string; items: string[]; onRemove: (i: number) => void; onAdd: (v: string) => void; color?: string }) => {
+const Tags = ({ label, items, onRemove, onAdd, color = 'blue', enableAutocorrect = false }: { label: string; items: string[]; onRemove: (i: number) => void; onAdd: (v: string) => void; color?: string; enableAutocorrect?: boolean }) => {
   const [inp, setInp] = useState('');
+  const [correction, setCorrection] = useState<{ from: string; to: string } | null>(null);
   const cm: Record<string, string> = { blue: 'bg-blue-50 text-blue-700 border-blue-200', green: 'bg-emerald-50 text-emerald-700 border-emerald-200', amber: 'bg-amber-50 text-amber-700 border-amber-200' };
+
+  const handleAdd = (raw: string) => {
+    const val = raw.trim();
+    if (!val) return;
+    if (enableAutocorrect) {
+      const { corrected, changed } = autocorrectSkill(val);
+      if (changed) {
+        setCorrection({ from: val, to: corrected });
+        setTimeout(() => setCorrection(null), 3500);
+      }
+      onAdd(corrected);
+    } else {
+      onAdd(val);
+    }
+    setInp('');
+  };
+
   return (
     <div>
       {label && <label className="block text-xs font-medium text-gray-500 mb-1.5 uppercase tracking-wider">{label}</label>}
@@ -180,12 +263,21 @@ const Tags = ({ label, items, onRemove, onAdd, color = 'blue' }: { label: string
           </span>
         ))}
       </div>
+      {/* Auto-correct notification */}
+      {correction && (
+        <div className="flex items-center gap-1.5 mb-2 px-3 py-1.5 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-700">
+          <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Auto-corrected <span className="line-through opacity-60">&ldquo;{correction.from}&rdquo;</span> → <strong>&ldquo;{correction.to}&rdquo;</strong>
+        </div>
+      )}
       <div className="flex gap-2">
         <input value={inp} onChange={e => setInp(e.target.value)}
-          onKeyDown={e => { if (e.key === 'Enter' && inp.trim()) { e.preventDefault(); onAdd(inp.trim()); setInp(''); } }}
+          onKeyDown={e => { if (e.key === 'Enter' && inp.trim()) { e.preventDefault(); handleAdd(inp); } }}
           placeholder={`Add ${(label || 'item').toLowerCase()}...`}
           className="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all" />
-        <button onClick={() => { if (inp.trim()) { onAdd(inp.trim()); setInp(''); } }}
+        <button onClick={() => handleAdd(inp)}
           className="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg text-xs"><I d={ic.plus} c="w-3.5 h-3.5" /></button>
       </div>
     </div>
@@ -493,10 +585,10 @@ export default function ProfilePage() {
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
               <Sec icon={ic.code} title="Skills" count={totalSkills} open={os.skills} toggle={() => tog('skills')} color="bg-gradient-to-br from-amber-500 to-orange-600" />
               {os.skills && <div className="px-6 pb-6 space-y-5">
-                <Tags label="Skills & Technologies" items={rd.skills.skills_technologies || []} color="blue"
+                <Tags label="Skills & Technologies" items={rd.skills.skills_technologies || []} color="blue" enableAutocorrect
                   onRemove={i => setRd(p => ({ ...p, skills: { ...p.skills, skills_technologies: p.skills.skills_technologies.filter((_, j) => j !== i) } }))}
                   onAdd={v => setRd(p => ({ ...p, skills: { ...p.skills, skills_technologies: [...p.skills.skills_technologies, v] } }))} />
-                <Tags label="Tools & Platforms" items={rd.skills.tools_platforms || []} color="green"
+                <Tags label="Tools & Platforms" items={rd.skills.tools_platforms || []} color="green" enableAutocorrect
                   onRemove={i => setRd(p => ({ ...p, skills: { ...p.skills, tools_platforms: p.skills.tools_platforms.filter((_, j) => j !== i) } }))}
                   onAdd={v => setRd(p => ({ ...p, skills: { ...p.skills, tools_platforms: [...p.skills.tools_platforms, v] } }))} />
               </div>}

@@ -134,3 +134,14 @@ class TokenData(BaseModel):
     user_id: str
     email: str
     role: str
+
+
+class ForgotPasswordRequest(BaseModel):
+    """Schema for forgot password request"""
+    email: EmailStr
+
+
+class ResetPasswordRequest(BaseModel):
+    """Schema for resetting password with token"""
+    token: str
+    new_password: str = Field(..., min_length=8)

@@ -207,6 +207,52 @@ def send_job_match_email(
     )
 
 
+def send_password_reset_email(
+    to_email: str,
+    reset_token: str,
+    frontend_url: str = "http://localhost:3000"
+) -> bool:
+    """Send password reset email with a secure reset link."""
+    reset_link = f"{frontend_url}/reset-password?token={reset_token}"
+    html_body = f'''
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #374151; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div style="background-color: #2563eb; padding: 24px; border-radius: 8px 8px 0 0;">
+            <h1 style="color: white; margin: 0; font-size: 24px;">JobMatch AI</h1>
+        </div>
+        <div style="background-color: #ffffff; padding: 32px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 8px 8px;">
+            <h2 style="color: #111827; margin: 0 0 16px 0; font-size: 20px;">Reset Your Password</h2>
+            <p style="color: #4b5563; margin: 0 0 24px 0; font-size: 16px;">
+                We received a request to reset your password. Click the button below to choose a new password.
+                This link will expire in <strong>1 hour</strong>.
+            </p>
+            <div style="margin-bottom: 24px;">
+                <a href="{reset_link}" style="background-color: #2563eb; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: 500;">
+                    Reset Password
+                </a>
+            </div>
+            <p style="color: #6b7280; font-size: 14px; margin: 0;">
+                If you did not request a password reset, you can safely ignore this email. Your password will not be changed.
+            </p>
+            <p style="color: #6b7280; font-size: 12px; margin: 16px 0 0 0; word-break: break-all;">
+                Or copy this link: {reset_link}
+            </p>
+        </div>
+        <div style="text-align: center; padding: 24px; color: #9ca3af; font-size: 14px;">
+            <p style="margin: 0;">© 2026 JobMatch AI. All rights reserved.</p>
+        </div>
+    </body>
+    </html>
+    '''
+    text_body = f"Reset Your Password\n\nClick the link below to reset your password (expires in 1 hour):\n{reset_link}\n\nIf you did not request this, ignore this email."
+    return email_service.send_email(to_email, "[JobMatch AI] Reset Your Password", html_body, text_body)
+
+
 def send_profile_view_email(
     candidate_email: str,
     viewer_name: str,

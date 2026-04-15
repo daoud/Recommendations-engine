@@ -258,8 +258,8 @@ export default function DashboardPage() {
               </div>
               <div>
                 <p className="text-gray-600 text-sm">Profile Status</p>
-                <p className={`font-medium ${profile.is_verified ? 'text-green-600' : 'text-yellow-600'}`}>
-                  {profile.is_verified ? 'Verified' : 'Pending Verification'}
+                <p className={`font-medium ${user?.email_verified ? 'text-green-600' : 'text-yellow-600'}`}>
+                  {user?.email_verified ? 'Verified' : 'Pending Verification'}
                 </p>
               </div>
             </div>

@@ -207,6 +207,36 @@ def send_job_match_email(
     )
 
 
+def send_otp_email(to_email: str, otp: str, first_name: str = "") -> bool:
+    """Send OTP verification email."""
+    greeting = f"Hi {first_name}," if first_name else "Hi,"
+    html_body = f'''
+    <!DOCTYPE html>
+    <html>
+    <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #374151; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div style="background-color: #2563eb; padding: 24px; border-radius: 8px 8px 0 0;">
+            <h1 style="color: white; margin: 0; font-size: 24px;">JobMatch AI</h1>
+        </div>
+        <div style="background-color: #ffffff; padding: 32px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 8px 8px;">
+            <h2 style="color: #111827; margin: 0 0 8px 0; font-size: 20px;">Verify your email address</h2>
+            <p style="color: #4b5563; margin: 0 0 24px 0;">{greeting} Use the code below to verify your account. It expires in <strong>10 minutes</strong>.</p>
+            <div style="background-color: #f3f4f6; border-radius: 8px; padding: 24px; text-align: center; margin-bottom: 24px;">
+                <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 14px;">Your verification code</p>
+                <p style="margin: 0; font-size: 40px; font-weight: 700; letter-spacing: 12px; color: #1d4ed8;">{otp}</p>
+            </div>
+            <p style="color: #6b7280; font-size: 14px; margin: 0;">If you did not create an account, please ignore this email.</p>
+        </div>
+        <div style="text-align: center; padding: 24px; color: #9ca3af; font-size: 14px;">
+            <p style="margin: 0;">© 2026 JobMatch AI. All rights reserved.</p>
+        </div>
+    </body>
+    </html>
+    '''
+    text_body = f"{greeting}\n\nYour JobMatch AI verification code is: {otp}\n\nThis code expires in 10 minutes."
+    return email_service.send_email(to_email, "[JobMatch AI] Your verification code", html_body, text_body)
+
+
 def send_password_reset_email(
     to_email: str,
     reset_token: str,

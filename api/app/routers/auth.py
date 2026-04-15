@@ -9,14 +9,15 @@ from sqlalchemy.sql import func  # MOVED TO TOP - THIS IS THE FIX
 from typing import Optional
 
 import secrets
+import random
 from datetime import datetime, timedelta
 
 from app.services.database import get_db
 from app.models import User, Profile
-from app.schemas import UserCreate, UserLogin, UserResponse, Token, ForgotPasswordRequest, ResetPasswordRequest
+from app.schemas import UserCreate, UserLogin, UserResponse, Token, ForgotPasswordRequest, ResetPasswordRequest, VerifyEmailRequest
 from app.utils import hash_password, verify_password, create_access_token, get_current_user
 from app.schemas import TokenData
-from app.services.email_service import send_password_reset_email
+from app.services.email_service import send_password_reset_email, send_otp_email
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
@@ -43,25 +44,31 @@ async def register(user_data: UserCreate, db: Session = Depends(get_db)):
             detail="Invalid role. Must be candidate, recruiter, or admin"
         )
     
-    # Create user
+    # Create user with OTP
+    otp = str(random.randint(100000, 999999))
     new_user = User(
         email=user_data.email,
         password_hash=hash_password(user_data.password),
         role=user_data.role,
         first_name=user_data.first_name,
-        last_name=user_data.last_name
+        last_name=user_data.last_name,
+        verification_otp=otp,
+        verification_otp_expires=datetime.utcnow() + timedelta(minutes=10)
     )
-    
+
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
-    
+
+    # Send OTP email
+    send_otp_email(to_email=new_user.email, otp=otp, first_name=new_user.first_name or "")
+
     # Create empty profile for candidates
     if user_data.role == "candidate":
         profile = Profile(user_id=new_user.id)
         db.add(profile)
         db.commit()
-    
+
     return new_user
 
 
@@ -188,3 +195,66 @@ async def reset_password(request: ResetPasswordRequest, db: Session = Depends(ge
     db.commit()
 
     return {"message": "Password has been reset successfully. You can now log in."}
+
+
+@router.post("/send-otp")
+async def send_otp(
+    current_user: TokenData = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Send or resend OTP to the user's registered email."""
+    user = db.execute(
+        select(User).where(User.id == current_user.user_id)
+    ).scalar_one_or_none()
+
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    if user.email_verified:
+        return {"message": "Email is already verified."}
+
+    otp = str(random.randint(100000, 999999))
+    user.verification_otp = otp
+    user.verification_otp_expires = datetime.utcnow() + timedelta(minutes=10)
+    db.commit()
+
+    send_otp_email(to_email=user.email, otp=otp, first_name=user.first_name or "")
+
+    return {"message": "Verification code sent to your email."}
+
+
+@router.post("/verify-email")
+async def verify_email(
+    request: VerifyEmailRequest,
+    current_user: TokenData = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Verify email using the 6-digit OTP."""
+    user = db.execute(
+        select(User).where(User.id == current_user.user_id)
+    ).scalar_one_or_none()
+
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    if user.email_verified:
+        return {"message": "Email is already verified."}
+
+    if not user.verification_otp or user.verification_otp != request.otp:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid verification code."
+        )
+
+    if user.verification_otp_expires is None or datetime.utcnow() > user.verification_otp_expires:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Verification code has expired. Please request a new one."
+        )
+
+    user.email_verified = True
+    user.verification_otp = None
+    user.verification_otp_expires = None
+    db.commit()
+
+    return {"message": "Email verified successfully!"}

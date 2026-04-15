@@ -12,6 +12,7 @@ interface User {
   role: string;
   first_name?: string;
   last_name?: string;
+  email_verified?: boolean;
 }
 
 interface Profile {
@@ -98,6 +99,28 @@ export default function DashboardPage() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8">
+
+        {/* Email Verification Banner */}
+        {user && user.email_verified === false && (
+          <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-4 mb-6 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+              </svg>
+              <div>
+                <p className="text-yellow-800 font-medium text-sm">Please verify your email address</p>
+                <p className="text-yellow-700 text-xs mt-0.5">A verification code was sent to <strong>{user.email}</strong></p>
+              </div>
+            </div>
+            <a
+              href="/verify-email"
+              className="flex-shrink-0 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-4 py-2 rounded-md transition"
+            >
+              Verify Now
+            </a>
+          </div>
+        )}
+
         {/* Quick Actions */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {user?.role === 'candidate' && (

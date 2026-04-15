@@ -17,7 +17,8 @@ from app.schemas.user import (
     Token,
     TokenData,
     ForgotPasswordRequest,
-    ResetPasswordRequest
+    ResetPasswordRequest,
+    VerifyEmailRequest
 )
 
 from app.schemas.job import (
@@ -50,6 +51,7 @@ __all__ = [
     "TokenData",
     "ForgotPasswordRequest",
     "ResetPasswordRequest",
+    "VerifyEmailRequest",
     
     # Job
     "JobSkillInput",

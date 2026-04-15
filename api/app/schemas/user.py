@@ -145,3 +145,8 @@ class ResetPasswordRequest(BaseModel):
     """Schema for resetting password with token"""
     token: str
     new_password: str = Field(..., min_length=8)
+
+
+class VerifyEmailRequest(BaseModel):
+    """Schema for verifying email with OTP"""
+    otp: str = Field(..., min_length=6, max_length=6)

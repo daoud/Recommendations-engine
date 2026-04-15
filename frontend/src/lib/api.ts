@@ -24,6 +24,7 @@ export interface User {
   role: string;
   first_name: string;
   last_name: string;
+  email_verified: boolean;
 }
 
 export interface Profile {
@@ -247,6 +248,17 @@ class ApiClient {
 
   async getMe(): Promise<User> {
     return this.request<User>('/auth/me');
+  }
+
+  async sendOTP(): Promise<{ message: string }> {
+    return this.request('/auth/send-otp', { method: 'POST' });
+  }
+
+  async verifyEmail(otp: string): Promise<{ message: string }> {
+    return this.request('/auth/verify-email', {
+      method: 'POST',
+      body: JSON.stringify({ otp }),
+    });
   }
 
   // Profile methods

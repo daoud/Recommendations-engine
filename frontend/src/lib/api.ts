@@ -25,6 +25,9 @@ export interface User {
   first_name: string;
   last_name: string;
   email_verified: boolean;
+  avatar_url?: string;
+  last_login_at?: string;
+  created_at?: string;
 }
 
 export interface Profile {
@@ -249,6 +252,27 @@ class ApiClient {
 
   async getMe(): Promise<User> {
     return this.request<User>('/auth/me');
+  }
+
+  async updateMe(data: { first_name?: string; last_name?: string }): Promise<User> {
+    return this.request<User>('/auth/me', {
+      method: 'PATCH',
+      body: JSON.stringify(data),
+    });
+  }
+
+  async changePassword(current_password: string, new_password: string): Promise<{ message: string }> {
+    return this.request('/auth/change-password', {
+      method: 'POST',
+      body: JSON.stringify({ current_password, new_password }),
+    });
+  }
+
+  async updateAvatar(avatar_url: string): Promise<User> {
+    return this.request<User>('/auth/avatar', {
+      method: 'POST',
+      body: JSON.stringify({ avatar_url }),
+    });
   }
 
   async preCheckApplication(jobId: string): Promise<{ can_apply: boolean; already_applied?: boolean; application_id?: string; status?: string; profile_complete?: boolean; warnings?: string[] }> {

@@ -33,8 +33,10 @@ class UserResponse(BaseModel):
     last_name: Optional[str]
     is_active: bool
     email_verified: bool
+    avatar_url: Optional[str] = None
+    last_login_at: Optional[datetime] = None
     created_at: datetime
-    
+
     class Config:
         from_attributes = True
 
@@ -150,3 +152,20 @@ class ResetPasswordRequest(BaseModel):
 class VerifyEmailRequest(BaseModel):
     """Schema for verifying email with OTP"""
     otp: str = Field(..., min_length=6, max_length=6)
+
+
+class ChangePasswordRequest(BaseModel):
+    """Schema for changing password (requires current password)"""
+    current_password: str
+    new_password: str = Field(..., min_length=8)
+
+
+class UpdateUserRequest(BaseModel):
+    """Schema for updating user's own profile info"""
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+
+
+class UpdateAvatarRequest(BaseModel):
+    """Schema for updating avatar (base64 data URL)"""
+    avatar_url: str

@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 
 from app.services.database import get_db
 from app.models import User, Profile
-from app.schemas import UserCreate, UserLogin, UserResponse, Token, ForgotPasswordRequest, ResetPasswordRequest, VerifyEmailRequest
+from app.schemas import UserCreate, UserLogin, UserResponse, Token, ForgotPasswordRequest, ResetPasswordRequest, VerifyEmailRequest, ChangePasswordRequest, UpdateUserRequest, UpdateAvatarRequest
 from app.utils import hash_password, verify_password, create_access_token, get_current_user
 from app.schemas import TokenData
 from app.services.email_service import send_password_reset_email, send_otp_email
@@ -267,3 +267,76 @@ async def verify_email(
     db.commit()
 
     return {"message": "Email verified successfully!"}
+
+
+@router.patch("/me", response_model=UserResponse)
+async def update_me(
+    request: UpdateUserRequest,
+    current_user: TokenData = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Update the current user's name."""
+    user = db.execute(select(User).where(User.id == current_user.user_id)).scalar_one_or_none()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    if request.first_name is not None:
+        user.first_name = request.first_name.strip()
+    if request.last_name is not None:
+        user.last_name = request.last_name.strip()
+    db.commit()
+    db.refresh(user)
+    return user
+
+
+@router.post("/change-password")
+async def change_password(
+    request: ChangePasswordRequest,
+    current_user: TokenData = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Change password — requires the current password for verification."""
+    user = db.execute(select(User).where(User.id == current_user.user_id)).scalar_one_or_none()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    if not verify_password(request.current_password, user.password_hash):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Current password is incorrect."
+        )
+
+    user.password_hash = hash_password(request.new_password)
+    db.commit()
+    return {"message": "Password changed successfully."}
+
+
+@router.post("/avatar", response_model=UserResponse)
+async def update_avatar(
+    request: UpdateAvatarRequest,
+    current_user: TokenData = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Update user avatar (accepts base64 data URL)."""
+    user = db.execute(select(User).where(User.id == current_user.user_id)).scalar_one_or_none()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    # Basic validation: must be a data URL or empty string
+    if request.avatar_url and not request.avatar_url.startswith("data:image/"):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid image format. Must be a base64 data URL."
+        )
+
+    # Limit size to ~2MB (base64 of ~1.5MB image)
+    if len(request.avatar_url) > 2_097_152:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Image too large. Please use an image under 1.5 MB."
+        )
+
+    user.avatar_url = request.avatar_url or None
+    db.commit()
+    db.refresh(user)
+    return user

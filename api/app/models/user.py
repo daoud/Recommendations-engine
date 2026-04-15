@@ -37,6 +37,7 @@ class User(Base):
     password_reset_expires = Column(DateTime(timezone=True), nullable=True)
     verification_otp = Column(String(10), nullable=True)
     verification_otp_expires = Column(DateTime(timezone=True), nullable=True)
+    avatar_url = Column(Text, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
 

@@ -251,6 +251,14 @@ class ApiClient {
     return this.request<User>('/auth/me');
   }
 
+  async preCheckApplication(jobId: string): Promise<{ can_apply: boolean; already_applied?: boolean; application_id?: string; status?: string; profile_complete?: boolean; warnings?: string[] }> {
+    return this.request('/applications/pre-check/' + jobId);
+  }
+
+  async generateCoverLetter(jobId: string): Promise<{ cover_letter: string }> {
+    return this.request('/recommendations/cover-letter/' + jobId);
+  }
+
   async sendOTP(): Promise<{ message: string }> {
     return this.request('/auth/send-otp', { method: 'POST' });
   }

@@ -21,6 +21,8 @@ export default function JobDetailsPage() {
   const [coverLetter, setCoverLetter] = useState('');
   const [applying, setApplying] = useState(false);
   const [applySuccess, setApplySuccess] = useState(false);
+  const [generatingCL, setGeneratingCL] = useState(false);
+  const [clGenerated, setClGenerated] = useState(false);
 
   useEffect(() => {
     const token = api.getToken();
@@ -55,15 +57,29 @@ export default function JobDetailsPage() {
     }
   };
 
-  const handleApply = async () => {
+  const handleGenerateCL = async () => {
+    setGeneratingCL(true);
+    try {
+      const data = await api.generateCoverLetter(jobId);
+      setCoverLetter(data.cover_letter || '');
+      setClGenerated(true);
+    } catch (err: any) {
+      alert('AI generation failed: ' + (err.message || 'Try again'));
+    } finally {
+      setGeneratingCL(false);
+    }
+  };
+
+  const handleApply = async (skipCoverLetter = false) => {
     setApplying(true);
     try {
-      await api.applyToJob(jobId, coverLetter || undefined, 'direct');
+      await api.applyToJob(jobId, skipCoverLetter ? undefined : (coverLetter || undefined), 'direct');
       setApplySuccess(true);
       setHasApplied(true);
       setApplicationStatus('applied');
       setShowApplyModal(false);
       setCoverLetter('');
+      setClGenerated(false);
     } catch (err: any) {
       alert(err.message || 'Failed to apply');
     } finally {
@@ -210,27 +226,96 @@ export default function JobDetailsPage() {
       </main>
 
       {showApplyModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-lg w-full mx-4 p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Apply to {job.title}</h2>
-            <p className="text-gray-600 mb-4">{job.company_name}</p>
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Cover Letter (Optional)</label>
-              <textarea
-                value={coverLetter}
-                onChange={(e) => setCoverLetter(e.target.value)}
-                rows={6}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Tell the employer why you are a great fit for this role..."
-              />
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={() => { setShowApplyModal(false); setCoverLetter(''); setClGenerated(false); }}>
+          <div className="bg-white rounded-xl shadow-2xl max-w-lg w-full" onClick={e => e.stopPropagation()}>
+
+            {/* Header */}
+            <div className="flex justify-between items-start p-5 border-b bg-gradient-to-r from-blue-50 to-indigo-50 rounded-t-xl">
+              <div>
+                <h2 className="text-lg font-bold text-gray-900">Apply to {job.title}</h2>
+                <p className="text-sm text-gray-500 mt-0.5">{job.company_name}</p>
+              </div>
+              <button
+                onClick={() => { setShowApplyModal(false); setCoverLetter(''); setClGenerated(false); }}
+                className="text-gray-400 hover:text-gray-700 text-2xl leading-none"
+              >&times;</button>
             </div>
-            <div className="flex gap-3 justify-end">
-              <button onClick={() => setShowApplyModal(false)} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200">
-                Cancel
-              </button>
-              <button onClick={handleApply} disabled={applying} className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50">
-                {applying ? 'Submitting...' : 'Submit Application'}
-              </button>
+
+            <div className="p-5">
+              {/* Cover Letter Section */}
+              <div className="mb-5">
+                <div className="flex items-center justify-between mb-2">
+                  <label className="text-sm font-medium text-gray-700">
+                    Cover Letter <span className="text-gray-400 font-normal">(Optional)</span>
+                  </label>
+                  <button
+                    onClick={handleGenerateCL}
+                    disabled={generatingCL}
+                    className="flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-purple-50 text-purple-700 hover:bg-purple-100 disabled:opacity-50 disabled:cursor-not-allowed transition"
+                  >
+                    {generatingCL ? (
+                      <>
+                        <svg className="animate-spin h-3.5 w-3.5" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
+                        </svg>
+                        Generating...
+                      </>
+                    ) : (
+                      <>
+                        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.798-1.442 2.798H4.24c-1.47 0-2.441-1.798-1.442-2.798L4.2 15.3" />
+                        </svg>
+                        AI Generate
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                {/* AI generated indicator */}
+                {clGenerated && (
+                  <div className="flex items-center gap-1.5 mb-2 text-xs text-purple-700 bg-purple-50 border border-purple-200 rounded-lg px-3 py-1.5">
+                    <svg className="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    AI-generated based on your profile &amp; this job — feel free to edit
+                  </div>
+                )}
+
+                <textarea
+                  value={coverLetter}
+                  onChange={(e) => setCoverLetter(e.target.value)}
+                  rows={7}
+                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm resize-none"
+                  placeholder="Tell the employer why you are a great fit for this role, or click 'AI Generate' to auto-fill..."
+                />
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-3">
+                {/* Skip — apply with no cover letter */}
+                <button
+                  onClick={() => handleApply(true)}
+                  disabled={applying}
+                  className="flex-1 py-2.5 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 disabled:opacity-50 text-sm font-medium transition"
+                >
+                  {applying ? 'Submitting...' : 'Skip & Apply'}
+                </button>
+
+                {/* Submit with cover letter */}
+                <button
+                  onClick={() => handleApply(false)}
+                  disabled={applying}
+                  className="flex-1 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 text-sm font-medium transition"
+                >
+                  {applying ? 'Submitting...' : 'Submit Application'}
+                </button>
+              </div>
+
+              <p className="text-center text-xs text-gray-400 mt-3">
+                &ldquo;Skip &amp; Apply&rdquo; submits without a cover letter
+              </p>
             </div>
           </div>
         </div>

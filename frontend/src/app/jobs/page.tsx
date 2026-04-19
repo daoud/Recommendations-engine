@@ -61,7 +61,7 @@ export default function JobsPage() {
   const [allJobs, setAllJobs] = useState<(Job & { similarity_score?: number })[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loadingJobs, setLoadingJobs] = useState(false);
-  const [searchMode, setSearchMode] = useState<'list' | 'semantic'>('list');
+  const [searchMode, setSearchMode] = useState<'list' | 'semantic' | 'text'>('list');
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
   const [filtersOpen, setFiltersOpen] = useState(true);
 
@@ -89,15 +89,43 @@ export default function JobsPage() {
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!searchQuery.trim()) { loadJobs(); return; }
+    const q = searchQuery.trim();
+    if (!q) { loadJobs(); return; }
     setLoadingJobs(true);
     try {
-      const data = await api.searchJobsSemantic(searchQuery);
-      setAllJobs(data.jobs || []);
-      setSearchMode('semantic');
+      // 1. Try semantic search first
+      let jobs: (Job & { similarity_score?: number })[] = [];
+      try {
+        const data = await api.searchJobsSemantic(q);
+        jobs = data.jobs || [];
+      } catch { /* semantic unavailable */ }
+
+      // 2. If semantic returned nothing, fall back to API text search
+      if (jobs.length === 0) {
+        try {
+          const fallback = await api.getJobs({ search: q });
+          jobs = fallback || [];
+        } catch { /* text search unavailable */ }
+      }
+
+      // 3. If still nothing, filter already-loaded jobs by title / company / description
+      if (jobs.length === 0 && allJobs.length > 0) {
+        const lower = q.toLowerCase();
+        jobs = allJobs.filter(j =>
+          j.title?.toLowerCase().includes(lower) ||
+          j.company_name?.toLowerCase().includes(lower) ||
+          j.description_raw?.toLowerCase().includes(lower) ||
+          j.location_city?.toLowerCase().includes(lower) ||
+          j.employment_type?.toLowerCase().includes(lower)
+        );
+        setSearchMode('text');
+      } else {
+        setSearchMode(jobs.some(j => (j as any).similarity_score) ? 'semantic' : 'text');
+      }
+
+      setAllJobs(jobs);
     } catch (err) {
       console.error('Search failed:', err);
-      setAllJobs([]);
     } finally {
       setLoadingJobs(false);
     }
@@ -211,6 +239,9 @@ export default function JobsPage() {
 
           {searchMode === 'semantic' && (
             <p className="text-sm text-blue-600 mb-4 font-medium">Showing AI-powered semantic search results</p>
+          )}
+          {searchMode === 'text' && (
+            <p className="text-sm text-gray-500 mb-4 font-medium">Showing keyword search results for &quot;{searchQuery}&quot;</p>
           )}
 
           <div className="flex gap-6">
@@ -396,8 +427,8 @@ export default function JobsPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
                   </svg>
-                  <p className="font-medium">No jobs match your filters</p>
-                  <p className="text-sm mt-1">Try adjusting or clearing your filters</p>
+                  <p className="font-medium">{searchMode !== 'list' ? `No jobs found for "${searchQuery}"` : 'No jobs match your filters'}</p>
+                  <p className="text-sm mt-1">{searchMode !== 'list' ? 'Try different keywords or clear the search' : 'Try adjusting or clearing your filters'}</p>
                   {activeFilterCount > 0 && (
                     <button
                       onClick={() => setFilters(EMPTY_FILTERS)}

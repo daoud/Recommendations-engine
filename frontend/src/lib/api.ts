@@ -28,6 +28,7 @@ export interface User {
   avatar_url?: string;
   last_login_at?: string;
   created_at?: string;
+  preferred_notice_period?: string;
 }
 
 export interface Profile {
@@ -42,6 +43,7 @@ export interface Profile {
   desired_salary_max: number;
   is_open_to_work: boolean;
   is_verified: boolean;
+  notice_period?: string;
   skills: ProfileSkill[];
   parsed_json_draft?: any;
 }
@@ -254,10 +256,17 @@ class ApiClient {
     return this.request<User>('/auth/me');
   }
 
-  async updateMe(data: { first_name?: string; last_name?: string }): Promise<User> {
+  async updateMe(data: { first_name?: string; last_name?: string; notice_period?: string; preferred_notice_period?: string }): Promise<User> {
     return this.request<User>('/auth/me', {
       method: 'PATCH',
       body: JSON.stringify(data),
+    });
+  }
+
+  async deleteAccount(otp: string, confirm_name: string): Promise<{ message: string }> {
+    return this.request('/auth/me', {
+      method: 'DELETE',
+      body: JSON.stringify({ otp, confirm_name }),
     });
   }
 

@@ -31,6 +31,7 @@ class ProfileUpdate(BaseModel):
     desired_salary_min: Optional[int] = None
     desired_salary_max: Optional[int] = None
     is_open_to_work: Optional[bool] = None
+    notice_period: Optional[str] = None
 
 
 # ─── Lazy-load multi-agent processor (heavy imports) ───

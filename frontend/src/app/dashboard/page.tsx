@@ -15,6 +15,7 @@ interface User {
   first_name?: string;
   last_name?: string;
   email_verified?: boolean;
+  preferred_notice_period?: string;
 }
 
 interface Profile {
@@ -24,6 +25,7 @@ interface Profile {
   location_country?: string;
   years_experience?: number;
   is_verified?: boolean;
+  notice_period?: string;
 }
 
 export default function DashboardPage() {
@@ -269,6 +271,15 @@ export default function DashboardPage() {
                 <p className="text-gray-600 text-sm">Profile Status</p>
                 <p className={`font-medium ${user?.email_verified ? 'text-green-600' : 'text-yellow-600'}`}>
                   {user?.email_verified ? 'Verified' : 'Pending Verification'}
+                </p>
+              </div>
+              <div>
+                <p className="text-gray-600 text-sm">Availability</p>
+                <p className="font-medium">
+                  {profile.notice_period === 'immediate' ? 'Immediately Available'
+                    : profile.notice_period === '15_days' ? '15 Days Notice'
+                    : profile.notice_period === '30_days' ? '30 Days Notice'
+                    : 'Not specified'}
                 </p>
               </div>
             </div>

@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 
 from app.services.database import get_db
 from app.models import User, Profile
-from app.schemas import UserCreate, UserLogin, UserResponse, Token, ForgotPasswordRequest, ResetPasswordRequest, VerifyEmailRequest, ChangePasswordRequest, UpdateUserRequest, UpdateAvatarRequest
+from app.schemas import UserCreate, UserLogin, UserResponse, Token, ForgotPasswordRequest, ResetPasswordRequest, VerifyEmailRequest, ChangePasswordRequest, UpdateUserRequest, UpdateAvatarRequest, DeleteAccountRequest
 from app.utils import hash_password, verify_password, create_access_token, get_current_user
 from app.schemas import TokenData
 from app.services.email_service import send_password_reset_email, send_otp_email
@@ -284,6 +284,15 @@ async def update_me(
         user.first_name = request.first_name.strip()
     if request.last_name is not None:
         user.last_name = request.last_name.strip()
+    if request.preferred_notice_period is not None:
+        user.preferred_notice_period = request.preferred_notice_period
+    # For candidates, also save notice_period into their profile
+    if request.notice_period is not None and user.role == "candidate":
+        profile = db.execute(
+            select(Profile).where(Profile.user_id == user.id)
+        ).scalar_one_or_none()
+        if profile:
+            profile.notice_period = request.notice_period
     db.commit()
     db.refresh(user)
     return user
@@ -340,3 +349,36 @@ async def update_avatar(
     db.commit()
     db.refresh(user)
     return user
+
+
+@router.delete("/me")
+async def delete_account(
+    request: DeleteAccountRequest,
+    current_user: TokenData = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Delete the current user's account — requires valid OTP and name confirmation."""
+    user = db.execute(select(User).where(User.id == current_user.user_id)).scalar_one_or_none()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    # Verify OTP
+    if not user.verification_otp or user.verification_otp != request.otp:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid verification code.")
+
+    if user.verification_otp_expires is None or datetime.utcnow() > user.verification_otp_expires:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Verification code has expired. Request a new one.")
+
+    # Verify name confirmation
+    expected = f"{user.first_name or ''} {user.last_name or ''}".strip().lower()
+    if not expected:
+        expected = user.email.lower()
+    if request.confirm_name.strip().lower() != expected:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Name confirmation does not match. Please type your full name exactly."
+        )
+
+    db.delete(user)
+    db.commit()
+    return {"message": "Account deleted successfully."}

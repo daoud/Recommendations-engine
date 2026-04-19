@@ -22,6 +22,7 @@ from app.schemas.user import (
     ChangePasswordRequest,
     UpdateUserRequest,
     UpdateAvatarRequest,
+    DeleteAccountRequest,
 )
 
 from app.schemas.job import (
@@ -58,6 +59,7 @@ __all__ = [
     "ChangePasswordRequest",
     "UpdateUserRequest",
     "UpdateAvatarRequest",
+    "DeleteAccountRequest",
     
     # Job
     "JobSkillInput",

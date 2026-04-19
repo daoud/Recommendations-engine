@@ -302,6 +302,7 @@ export default function ProfilePage() {
     headline: '', summary: '', location_city: '', location_country: '',
     years_experience: 0, desired_role: '',
     desired_salary_min: 0, desired_salary_max: 0, is_open_to_work: true,
+    notice_period: '',
   });
 
   useEffect(() => { if (!loading && !user) router.push('/login'); }, [user, loading, router]);
@@ -367,6 +368,7 @@ export default function ProfilePage() {
         desired_salary_min: 0,
         desired_salary_max: 0,
         is_open_to_work: true,
+        notice_period: pi.notice_period || '',
       });
     } else {
       // NO PARSED DATA → use profile fields only, rest empty
@@ -381,6 +383,7 @@ export default function ProfilePage() {
         desired_salary_min: profile.desired_salary_min || 0,
         desired_salary_max: profile.desired_salary_max || 0,
         is_open_to_work: profile.is_open_to_work ?? true,
+        notice_period: (profile as any).notice_period || '',
       });
     }
   };
@@ -513,7 +516,16 @@ export default function ProfilePage() {
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   <Inp label="Years Exp" type="number" value={fd.years_experience} onChange={(v: number) => setFd(p => ({ ...p, years_experience: v }))} />
-                  <Inp label="Notice Period" value={pi.notice_period} onChange={(v: string) => sPI('notice_period', v)} />
+                  <div>
+                    <label className="block text-xs font-medium text-gray-500 mb-1">Notice Period</label>
+                    <select value={fd.notice_period} onChange={e => { setFd(p => ({ ...p, notice_period: e.target.value })); sPI('notice_period', e.target.value); }}
+                      className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      <option value="">Select...</option>
+                      <option value="immediate">Immediately Available</option>
+                      <option value="15_days">15 Days Notice</option>
+                      <option value="30_days">30 Days Notice</option>
+                    </select>
+                  </div>
                   <Inp label="Min Salary ($)" type="number" value={fd.desired_salary_min} onChange={(v: number) => setFd(p => ({ ...p, desired_salary_min: v }))} />
                   <Inp label="Max Salary ($)" type="number" value={fd.desired_salary_max} onChange={(v: number) => setFd(p => ({ ...p, desired_salary_max: v }))} />
                 </div>

@@ -38,6 +38,7 @@ class User(Base):
     verification_otp = Column(String(10), nullable=True)
     verification_otp_expires = Column(DateTime(timezone=True), nullable=True)
     avatar_url = Column(Text, nullable=True)
+    preferred_notice_period = Column(String(20), nullable=True)  # recruiter preference
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
 
@@ -81,6 +82,7 @@ class Profile(Base):
     desired_salary_max = Column(Integer)
     salary_currency = Column(String(3), default="USD")
     is_open_to_work = Column(Boolean, default=True, nullable=False)
+    notice_period = Column(String(20), nullable=True)  # candidate availability
     last_vectorized_at = Column(DateTime(timezone=True))
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)

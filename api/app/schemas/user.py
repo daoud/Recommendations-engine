@@ -35,6 +35,7 @@ class UserResponse(BaseModel):
     email_verified: bool
     avatar_url: Optional[str] = None
     last_login_at: Optional[datetime] = None
+    preferred_notice_period: Optional[str] = None
     created_at: datetime
 
     class Config:
@@ -164,8 +165,16 @@ class UpdateUserRequest(BaseModel):
     """Schema for updating user's own profile info"""
     first_name: Optional[str] = None
     last_name: Optional[str] = None
+    preferred_notice_period: Optional[str] = None  # recruiter: 'immediate','15_days','30_days'
+    notice_period: Optional[str] = None             # candidate: 'immediate','15_days','30_days'
 
 
 class UpdateAvatarRequest(BaseModel):
     """Schema for updating avatar (base64 data URL)"""
     avatar_url: str
+
+
+class DeleteAccountRequest(BaseModel):
+    """Schema for account deletion — requires OTP + name confirmation"""
+    otp: str = Field(..., min_length=6, max_length=6)
+    confirm_name: str

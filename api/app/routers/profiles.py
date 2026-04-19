@@ -154,6 +154,7 @@ async def get_my_profile(
         "desired_salary_max": profile.desired_salary_max,
         "is_open_to_work": profile.is_open_to_work,
         "is_verified": profile.is_verified,
+        "notice_period": profile.notice_period,
         "parsed_json_draft": profile.parsed_json_draft,
         "validated_json": profile.validated_json,
         "skills": skills,

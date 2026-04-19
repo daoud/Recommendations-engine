@@ -142,6 +142,18 @@ export default function RecruiterCandidatesPage() {
   const totalHired = allApps.filter(a => a.status === 'hired').length;
   const totalShortlisted = allApps.filter(a => a.status === 'shortlisted').length;
 
+  // Pipeline counts from allApps
+  const pipelineMap: Record<string, number> = {};
+  allApps.forEach(a => { pipelineMap[a.status] = (pipelineMap[a.status] || 0) + 1; });
+  const pipelineStages = [
+    { key: 'applied',            label: 'Applied',     bar: 'bg-blue-500',    light: 'bg-blue-50 text-blue-700' },
+    { key: 'reviewing',          label: 'Reviewing',   bar: 'bg-yellow-500',  light: 'bg-yellow-50 text-yellow-700' },
+    { key: 'shortlisted',        label: 'Shortlisted', bar: 'bg-green-500',   light: 'bg-green-50 text-green-700' },
+    { key: 'interview',          label: 'Interview',   bar: 'bg-purple-500',  light: 'bg-purple-50 text-purple-700' },
+    { key: 'offer',              label: 'Offer Sent',  bar: 'bg-teal-500',    light: 'bg-teal-50 text-teal-700' },
+    { key: 'hired',              label: 'Hired',       bar: 'bg-emerald-500', light: 'bg-emerald-50 text-emerald-700' },
+  ];
+
   const filtered = filterStatus ? applications.filter(a => a.status === filterStatus) : applications;
 
   if (loading || pageLoading || !user) {
@@ -173,6 +185,37 @@ export default function RecruiterCandidatesPage() {
             </div>
           ))}
         </div>
+
+        {/* Pipeline bar chart */}
+        {totalApplicants > 0 && (
+          <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mb-6">
+            <h2 className="text-base font-semibold text-gray-800 mb-4">Hiring Pipeline</h2>
+            <div className="flex gap-2 items-end h-28">
+              {pipelineStages.map(stage => {
+                const count = pipelineMap[stage.key] || 0;
+                const maxCount = Math.max(...pipelineStages.map(s => pipelineMap[s.key] || 0), 1);
+                const heightPct = Math.max(8, (count / maxCount) * 100);
+                return (
+                  <div key={stage.key} className="flex-1 flex flex-col items-center justify-end h-full">
+                    <span className="text-sm font-bold text-gray-800 mb-1">{count}</span>
+                    <div className="w-full flex flex-col justify-end" style={{ height: `${heightPct}%` }}>
+                      <div className={`w-full ${stage.bar} rounded-t-md opacity-80`} style={{ height: '100%' }} />
+                    </div>
+                    <div className={`w-full text-center py-1.5 text-[11px] font-medium rounded-b-md mt-0 ${stage.light}`}>
+                      {stage.label}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            {(pipelineMap['rejected'] || pipelineMap['withdrawn']) && (
+              <div className="flex gap-4 mt-3 text-xs text-gray-400">
+                {pipelineMap['rejected'] && <span>🚫 {pipelineMap['rejected']} rejected</span>}
+                {pipelineMap['withdrawn'] && <span>↩ {pipelineMap['withdrawn']} withdrawn</span>}
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="flex gap-6">
           {/* Left: job list */}

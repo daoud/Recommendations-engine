@@ -7,6 +7,8 @@ import { useAuth } from '@/contexts/AuthContext';
 import Navbar from '@/components/Navbar';
 import { api } from '@/lib/api';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '${API_URL}';
+
 interface TalentSkill {
   name: string;
   level: string;
@@ -87,7 +89,7 @@ export default function TalentsPage() {
       if (openOnly) params.set('is_open_to_work', 'true');
 
       const token = localStorage.getItem('token');
-      const resp = await fetch(`http://localhost:8000/recruiter/talents?${params.toString()}`, {
+      const resp = await fetch(`${API_URL}/recruiter/talents?${params.toString()}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!resp.ok) throw new Error('Failed to load talents');
@@ -127,7 +129,7 @@ export default function TalentsPage() {
     setSending(true);
     try {
       const token = localStorage.getItem('token');
-      const resp = await fetch(`http://localhost:8000/recruiter/talents/${inviteModal.talent.user_id}/invite`, {
+      const resp = await fetch(`${API_URL}/recruiter/talents/${inviteModal.talent.user_id}/invite`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -165,7 +167,7 @@ export default function TalentsPage() {
     setLoadingDetail(true);
     try {
       const token = localStorage.getItem('token');
-      const resp = await fetch(`http://localhost:8000/recruiter/talents/${userId}`, {
+      const resp = await fetch(`${API_URL}/recruiter/talents/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (resp.ok) {

@@ -16,7 +16,7 @@ const candidateLinks = [
 ];
 
 const recruiterLinks = [
-  { href: '/recruiter/dashboard', label: 'Dashboard' },
+  { href: '/recruiter', label: 'Dashboard' },
   { href: '/recruiter/post-job', label: 'Post Job' },
   { href: '/recruiter/my-jobs', label: 'My Postings' },
   { href: '/recruiter/candidates', label: 'Candidates' },
@@ -41,7 +41,7 @@ function getNavLinks(role: string | undefined) {
 
 function getHomePath(role: string | undefined) {
   switch (role) {
-    case 'recruiter': return '/recruiter/dashboard';
+    case 'recruiter': return '/recruiter';
     case 'admin':     return '/admin/dashboard';
     default:          return '/dashboard';
   }

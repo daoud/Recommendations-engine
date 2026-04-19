@@ -486,6 +486,10 @@ class ApiClient {
   }
 
   // Skills taxonomy methods
+  async getCandidateProfile(userId: string): Promise<any> {
+    return this.request(`/profiles/candidate/${userId}`);
+  }
+
   async getSkills(params?: { page?: number; category?: string }): Promise<Skill[]> {
     const searchParams = new URLSearchParams();
     if (params?.page) searchParams.append('page', params.page.toString());

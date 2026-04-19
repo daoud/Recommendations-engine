@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import api, { Job, User } from '@/lib/api';
+import Navbar from '@/components/Navbar';
 import NotificationBell from '@/components/NotificationBell';
 
 export default function MyJobsPage() {
@@ -92,28 +93,15 @@ export default function MyJobsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <Link href="/recruiter" className="text-gray-600 hover:text-gray-900">
-              &larr; Back to Dashboard
-            </Link>
-            <h1 className="text-2xl font-bold text-gray-900">My Posted Jobs</h1>
-          </div>
-          <div className="flex items-center gap-4">
-            <NotificationBell />
-            <Link
-              href="/recruiter/post-job"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
-            >
-              + Post New Job
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-2xl font-bold text-gray-900">My Posted Jobs</h1>
+          <Link href="/recruiter/post-job" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium text-sm transition-colors">
+            + Post New Job
+          </Link>
+        </div>
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-6">
             {error}

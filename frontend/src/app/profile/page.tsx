@@ -216,11 +216,14 @@ const Sec = ({ icon, title, count, open, toggle, color }: { icon: string; title:
   </button>
 );
 
-const Inp = ({ label, value, onChange, type = 'text', cls = '' }: any) => (
+const Inp = ({ label, value, onChange, type = 'text', cls = '', error = '', required = false }: any) => (
   <div className={cls}>
-    <label className="block text-xs font-medium text-gray-500 mb-1.5 uppercase tracking-wider">{label}</label>
+    <label className="block text-xs font-medium text-gray-500 mb-1.5 uppercase tracking-wider">
+      {label}{required && <span className="text-red-500 ml-0.5">*</span>}
+    </label>
     <input type={type} value={value ?? ''} onChange={(e: any) => onChange(type === 'number' ? parseInt(e.target.value) || 0 : e.target.value)}
-      className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 focus:bg-white transition-all" />
+      className={`w-full px-3.5 py-2.5 bg-gray-50 border rounded-xl text-sm text-gray-800 focus:outline-none focus:ring-2 focus:bg-white transition-all ${error ? 'border-red-400 focus:ring-red-500/20 focus:border-red-400' : 'border-gray-200 focus:ring-blue-500/20 focus:border-blue-400'}`} />
+    {error && <p className="text-xs text-red-500 mt-1">{error}</p>}
   </div>
 );
 
@@ -304,6 +307,7 @@ export default function ProfilePage() {
     desired_salary_min: 0, desired_salary_max: 0, is_open_to_work: true,
     notice_period: '',
   });
+  const [fErr, setFErr] = useState<Record<string, string>>({});
 
   useEffect(() => { if (!loading && !user) router.push('/login'); }, [user, loading, router]);
 
@@ -413,6 +417,21 @@ export default function ProfilePage() {
   };
 
   const handleSave = async () => {
+    // Validate required fields
+    const errs: Record<string, string> = {};
+    if (!fd.headline.trim()) errs.headline = 'Headline is required';
+    if (!fd.location_city.trim() && !fd.location_country.trim()) errs.location = 'City or Country is required';
+    if (!fd.years_experience && fd.years_experience !== 0) errs.years_experience = 'Years of experience is required';
+    const totalSkills = (rd.skills.skills_technologies?.length || 0) + (rd.skills.tools_platforms?.length || 0);
+    if (totalSkills === 0) errs.skills = 'Add at least one skill';
+    setFErr(errs);
+    if (Object.keys(errs).length > 0) {
+      setMsg({ t: 'err', txt: 'Please fill in all required fields before saving.' });
+      // Expand personal section if it has errors
+      if (errs.headline || errs.location || errs.years_experience) setOs(p => ({ ...p, personal: true }));
+      if (errs.skills) setOs(p => ({ ...p, skills: true }));
+      return;
+    }
     setSaving(true); setMsg(null);
     try {
       await api.updateProfile(fd);
@@ -494,7 +513,7 @@ export default function ProfilePage() {
                   <Inp label="Last Name" value={pi.last_name} onChange={(v: string) => sPI('last_name', v)} />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Inp label="Headline" value={fd.headline} onChange={(v: string) => setFd(p => ({ ...p, headline: v }))} />
+                  <Inp label="Headline" value={fd.headline} onChange={(v: string) => { setFd(p => ({ ...p, headline: v })); setFErr(e => ({ ...e, headline: '' })); }} required error={fErr.headline} />
                   <Inp label="Desired Role" value={fd.desired_role} onChange={(v: string) => setFd(p => ({ ...p, desired_role: v }))} />
                 </div>
                 <TArea label="Summary" value={fd.summary} onChange={(v: string) => setFd(p => ({ ...p, summary: v }))} />
@@ -510,12 +529,12 @@ export default function ProfilePage() {
                   <Inp label="Alt Phone" value={pi.contact.alternate_phone} onChange={(v: string) => sPIC('alternate_phone', v)} />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <Inp label="City" value={fd.location_city} onChange={(v: string) => { setFd(p => ({ ...p, location_city: v })); sPIL('city', v); }} />
-                  <Inp label="Country" value={fd.location_country} onChange={(v: string) => { setFd(p => ({ ...p, location_country: v })); sPIL('country', v); }} />
+                  <Inp label="City" value={fd.location_city} onChange={(v: string) => { setFd(p => ({ ...p, location_city: v })); sPIL('city', v); setFErr(e => ({ ...e, location: '' })); }} required={!fd.location_country} error={!fd.location_country ? fErr.location : ''} />
+                  <Inp label="Country" value={fd.location_country} onChange={(v: string) => { setFd(p => ({ ...p, location_country: v })); sPIL('country', v); setFErr(e => ({ ...e, location: '' })); }} required={!fd.location_city} error={!fd.location_city ? fErr.location : ''} />
                   <Inp label="Address" value={pi.location.address} onChange={(v: string) => sPIL('address', v)} />
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  <Inp label="Years Exp" type="number" value={fd.years_experience} onChange={(v: number) => setFd(p => ({ ...p, years_experience: v }))} />
+                  <Inp label="Years Exp" type="number" value={fd.years_experience} onChange={(v: number) => { setFd(p => ({ ...p, years_experience: v })); setFErr(e => ({ ...e, years_experience: '' })); }} required error={fErr.years_experience} />
                   <div>
                     <label className="block text-xs font-medium text-gray-500 mb-1">Notice Period</label>
                     <select value={fd.notice_period} onChange={e => { setFd(p => ({ ...p, notice_period: e.target.value })); sPI('notice_period', e.target.value); }}
@@ -596,8 +615,9 @@ export default function ProfilePage() {
             {/* SKILLS — 2 CATEGORIES */}
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
               <Sec icon={ic.code} title="Skills" count={totalSkills} open={os.skills} toggle={() => tog('skills')} color="bg-gradient-to-br from-amber-500 to-orange-600" />
+              {fErr.skills && <p className="px-6 pt-2 text-xs text-red-500 font-medium">{fErr.skills}</p>}
               {os.skills && <div className="px-6 pb-6 space-y-5">
-                <Tags label="Skills & Technologies" items={rd.skills.skills_technologies || []} color="blue" enableAutocorrect
+                <Tags label="Skills & Technologies *" items={rd.skills.skills_technologies || []} color="blue" enableAutocorrect
                   onRemove={i => setRd(p => ({ ...p, skills: { ...p.skills, skills_technologies: p.skills.skills_technologies.filter((_, j) => j !== i) } }))}
                   onAdd={v => setRd(p => ({ ...p, skills: { ...p.skills, skills_technologies: [...p.skills.skills_technologies, v] } }))} />
                 <Tags label="Tools & Platforms" items={rd.skills.tools_platforms || []} color="green" enableAutocorrect

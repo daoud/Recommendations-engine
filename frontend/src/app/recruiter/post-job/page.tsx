@@ -42,6 +42,7 @@ export default function PostJobPage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [skills, setSkills] = useState<Skill[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<SelectedSkill[]>([]);
   const [skillSearch, setSkillSearch] = useState('');
@@ -116,6 +117,7 @@ export default function PostJobPage() {
         in_taxonomy: true,
         is_verified: true,
       }]);
+      setFieldErrors(p => ({ ...p, skills: '' }));
     }
     setSkillSearch('');
     setShowSkillDropdown(false);
@@ -327,6 +329,18 @@ export default function PostJobPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    // Client-side validation
+    const errs: Record<string, string> = {};
+    if (!form.location_city.trim() && !form.location_country.trim()) errs.location = 'City or Country is required';
+    if (form.experience_min_years === '') errs.experience_min_years = 'Minimum experience is required';
+    if (selectedSkills.length === 0) errs.skills = 'Add at least one required skill';
+    setFieldErrors(errs);
+    if (Object.keys(errs).length > 0) {
+      setError('Please fill in all required fields before posting.');
+      return;
+    }
+
     setSubmitting(true);
 
     try {
@@ -467,18 +481,19 @@ export default function PostJobPage() {
 
             {/* Location */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-4">
-              <h3 className="text-lg font-semibold text-gray-800">Location</h3>
+              <h3 className="text-lg font-semibold text-gray-800">Location <span className="text-red-500 text-sm font-normal">(City or Country required)</span></h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">City</label>
-                  <input type="text" name="location_city" value={form.location_city} onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                  <label className="block text-sm font-medium text-gray-700 mb-1">City {!form.location_country && <span className="text-red-500">*</span>}</label>
+                  <input type="text" name="location_city" value={form.location_city} onChange={e => { handleChange(e); setFieldErrors(p => ({ ...p, location: '' })); }}
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${fieldErrors.location ? 'border-red-400 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'}`}
                     placeholder="e.g. Pune" />
+                  {fieldErrors.location && !form.location_country && <p className="text-xs text-red-500 mt-1">{fieldErrors.location}</p>}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Country</label>
-                  <input type="text" name="location_country" value={form.location_country} onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Country {!form.location_city && <span className="text-red-500">*</span>}</label>
+                  <input type="text" name="location_country" value={form.location_country} onChange={e => { handleChange(e); setFieldErrors(p => ({ ...p, location: '' })); }}
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${fieldErrors.location ? 'border-red-400 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'}`}
                     placeholder="e.g. India" />
                 </div>
                 <div>
@@ -537,10 +552,11 @@ export default function PostJobPage() {
               <h3 className="text-lg font-semibold text-gray-800">Experience Required</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Min Years</label>
-                  <input type="number" name="experience_min_years" value={form.experience_min_years} onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-                    placeholder="3" />
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Min Years <span className="text-red-500">*</span></label>
+                  <input type="number" name="experience_min_years" value={form.experience_min_years} onChange={e => { handleChange(e); setFieldErrors(p => ({ ...p, experience_min_years: '' })); }}
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${fieldErrors.experience_min_years ? 'border-red-400 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'}`}
+                    placeholder="e.g. 3 (use 0 for entry-level)" min="0" />
+                  {fieldErrors.experience_min_years && <p className="text-xs text-red-500 mt-1">{fieldErrors.experience_min_years}</p>}
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Max Years</label>
@@ -552,8 +568,11 @@ export default function PostJobPage() {
             </div>
 
             {/* Skills with AI Validation */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-4">
-              <h3 className="text-lg font-semibold text-gray-800">Required Skills</h3>
+            <div className={`bg-white rounded-xl shadow-sm border p-6 space-y-4 ${fieldErrors.skills ? 'border-red-300' : 'border-gray-200'}`}>
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-semibold text-gray-800">Required Skills <span className="text-red-500">*</span></h3>
+                {fieldErrors.skills && <p className="text-xs text-red-500 font-medium">{fieldErrors.skills}</p>}
+              </div>
 
               {/* Selected skills */}
               {selectedSkills.length > 0 && (
